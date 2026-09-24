@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Domaine provisoire : si le domaine change, remplacer https://matchpro.ch ici, dans robots.txt et dans index.html -->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>https://matchpro.ch/</loc><lastmod>2026-09-25</lastmod></url>
+</urlset>
