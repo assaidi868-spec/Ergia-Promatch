@@ -1,192 +1,1163 @@
 <!DOCTYPE html>
-<html lang="fr-CH">
+<html lang="fr">
 <head>
-<meta charset="utf-8">
+<meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Nettoyage en Suisse romande : devis gratuit | MatchPro</title>
-<meta name="description" content="Fin de bail, fin de chantier, bureaux : décrivez votre besoin en une minute. MatchPro transmet votre demande à une entreprise de nettoyage partenaire en Suisse romande. Gratuit et sans engagement.">
-<link rel="canonical" href="https://matchpro.ch/">
-<meta name="theme-color" content="#FFFFFF">
-<meta name="color-scheme" content="light">
-<!-- Domaine : https://matchpro.ch est provisoire. S'il change, rechercher-remplacer https://matchpro.ch dans tout le dossier site/. -->
-<meta property="og:type" content="website">
-<meta property="og:site_name" content="MatchPro">
-<meta property="og:locale" content="fr_CH">
-<meta property="og:title" content="Nettoyage en Suisse romande : devis gratuit | MatchPro">
-<meta property="og:description" content="Fin de bail, fin de chantier, bureaux : décrivez votre besoin en une minute. MatchPro transmet votre demande à une entreprise de nettoyage partenaire en Suisse romande. Gratuit et sans engagement.">
-<meta property="og:url" content="https://matchpro.ch/">
-<meta property="og:image" content="https://matchpro.ch/matchpro-partage.png">
-<meta property="og:image:width" content="1200">
-<meta property="og:image:height" content="630">
-<meta name="twitter:card" content="summary_large_image">
-<script type="application/ld+json">
-{
- "@context": "https://schema.org",
- "@type": "WebSite",
- "name": "MatchPro",
- "url": "https://matchpro.ch/",
- "inLanguage": "fr-CH"
-}
-</script>
-<script type="application/ld+json">
-{
- "@context": "https://schema.org",
- "@type": "Organization",
- "name": "MatchPro",
- "url": "https://matchpro.ch/",
- "logo": "https://matchpro.ch/matchpro-partage.png",
- "description": "Service de mise en relation pour le nettoyage en Suisse romande : fin de bail, fin de chantier, bureaux et immeubles.",
- "areaServed": "Suisse romande"
-}
-</script>
-<meta name="format-detection" content="telephone=no">
-<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%23161616'/%3E%3Ccircle cx='12.5' cy='16' r='6.5' fill='none' stroke='white' stroke-width='1.8'/%3E%3Ccircle cx='19.5' cy='16' r='6.5' fill='none' stroke='white' stroke-width='1.8'/%3E%3C/svg%3E">
+<title>Devis nettoyage professionnel — Suisse romande | MatchPro</title>
+<meta name="description" content="Nettoyage de fin de chantier, fin de bail et bureaux en Suisse romande, vitres en option. Devis gratuit et sans engagement, un seul professionnel vous rappelle, pas quatre. Prix indicatifs et devis gratuit.">
+<meta name="theme-color" content="#0B1F3A">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'%3E%3Crect width='48' height='48' rx='12' fill='%230B1F3A'/%3E%3Cpath d='M11.5 14l7 15.5 18-15.5' fill='none' stroke='%23FF6A1F' stroke-width='5.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M11.5 34V14M36.5 34V14' fill='none' stroke='%23fff' stroke-width='5.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&amp;family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600&amp;display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/matchpro.css">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600&family=Sora:wght@500;600;700;800&display=swap" rel="stylesheet">
+<!--
+  ============================================================
+  MODÈLE DE LANDING PAGE LEADS — MatchPro (modèle de base) (réutilisable client / niche)
+  ============================================================
+  Tout ce qui change d'un client à l'autre est dans l'objet CONFIG
+  (en bas de page, dans <script>). Pour une nouvelle niche :
+  dupliquer ce fichier, modifier CONFIG, ne pas toucher au reste.
+
+  Pages par annonce Google Ads (message match) :
+    ?service=fin-de-bail   ?service=chantier   ?service=bureaux ...
+  → le titre, le texte et le formulaire s'adaptent automatiquement.
+
+  Parcours du formulaire :
+    Étape 1 = barre du hero (service + NPA)
+    Étapes 2 et 3 = carte qui remplace l'illustration à droite
+  ============================================================
+-->
+<style>
+  :root {
+    --bg: #FFFFFF; --bg-alt: #F4F6F9; --surface: #FFFFFF; --surface-2: #EAEEF3; --footer: #081629;
+    --line: #DDE3EA; --line-soft: #E8ECF1; --line-strong: #C3CDD9;
+    --ink: #0B1F3A; --text-2: #2C3E57; --text-3: #46566D; --muted: #5B687B; --placeholder: #7D8898;
+    --accent: #FF6A1F; --accent-hi: #FF8246; --accent-ink: #C24A0E; --accent-soft: #FFF1E9; --accent-line: rgba(255,106,31,.45);
+    --navy: #0B1F3A;
+    --warn: #B83A12; --warn-soft: #FDECE6;
+    --shadow: 0 1px 2px rgba(11,31,58,.06), 0 18px 40px -18px rgba(11,31,58,.28);
+    --radius: 16px;
+    --font-body: 'DM Sans', system-ui, -apple-system, sans-serif;
+    --font-display: 'Sora', 'DM Sans', system-ui, sans-serif;
+    --font-logo: 'Sora', var(--font-body);
+  }
+  /* Zones sombres : hero, CTA final, footer */
+  .hero, .final-cta, footer, .pro-band {
+    --bg: #0B1F3A; --bg-alt: #0E2544; --surface: #132C4F; --surface-2: #1B3A63;
+    --line: #244371; --line-soft: #1C375C; --line-strong: #33598C;
+    --ink: #FFFFFF; --text-2: #DCE4EF; --text-3: #B8C6D9; --muted: #9DB0C8; --placeholder: #8CA0BA;
+    --accent-ink: #FF6A1F; --accent-soft: rgba(255,106,31,.14);
+    --shadow: 0 24px 60px rgba(3,10,22,.5);
+    color: var(--ink);
+  }
+  /* La carte formulaire redevient claire dans le hero */
+  .hero .form-card {
+    --bg: #F4F6F9; --surface: #FFFFFF; --surface-2: #EAEEF3;
+    --line: #DDE3EA; --line-soft: #E8ECF1; --line-strong: #C3CDD9;
+    --ink: #0B1F3A; --text-2: #2C3E57; --text-3: #46566D; --muted: #5B687B; --placeholder: #7D8898;
+    --accent-ink: #C24A0E; --accent-soft: #FFF1E9;
+    color: var(--ink);
+  }
+  html { scroll-behavior: smooth; scroll-padding-top: 92px; }
+  *, *::before, *::after { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--ink); font-family: var(--font-body); line-height: 1.55; -webkit-font-smoothing: antialiased; }
+  h1, h2, h3 { margin: 0; font-family: var(--font-display); font-weight: 700; letter-spacing: -0.025em; }
+  a { color: inherit; text-decoration: none; }
+  a:hover { color: var(--accent-ink); }
+  :focus-visible { outline: 2px solid var(--accent); outline-offset: 4px; border-radius: 8px; }
+  [hidden] { display: none !important; }
+  .wrap { width: 100%; max-width: 1280px; margin: 0 auto; padding: 0 64px; }
+  .eyebrow { font-size: .75rem; font-weight: 600; color: var(--accent-ink); text-transform: uppercase; letter-spacing: .12em; }
+  em { font-style: normal; color: var(--accent-ink); }
+
+  /* Sections */
+  section.block { padding: 96px 0; border-top: 1px solid var(--line-soft); }
+  section.block.alt { background: var(--bg-alt); }
+  section.block h2 { font-size: clamp(1.9rem, 3.4vw, 2.75rem); line-height: 1.08; margin-top: 14px; max-width: 20ch; }
+  p.sub { color: var(--text-3); margin: 16px 0 0; max-width: 56ch; font-size: 1.05rem; }
+
+  .demo-banner { display: none; background: var(--warn-soft); color: #8A2E12; border-bottom: 1px solid #F4C3B2; font-size: .8rem; text-align: center; padding: 7px 12px; }
+  .demo-banner.show { display: block; }
+
+  /* Boutons */
+  .btn { display: inline-flex; align-items: center; justify-content: center; gap: 10px; min-height: 48px; padding: 0 22px; border-radius: 12px; border: 0; background: var(--accent); color: #0B1F3A; font: 600 .98rem var(--font-body); cursor: pointer; white-space: nowrap; transition: background .2s, transform .15s; }
+  .btn:hover { background: var(--accent-hi); color: #0B1F3A; }
+  .btn:active { transform: translateY(1px); }
+  .btn:disabled { opacity: .7; cursor: default; transform: none; }
+  .btn.ghost { background: transparent; color: var(--ink); border: 1px solid var(--line-strong); }
+  .btn.ghost:hover { border-color: var(--accent); color: var(--ink); }
+  .btn svg { flex-shrink: 0; }
+
+  /* Header */
+  header.site { position: sticky; top: 0; z-index: 20; background: rgba(255,255,255,.92); backdrop-filter: saturate(1.3) blur(12px); -webkit-backdrop-filter: saturate(1.3) blur(12px); border-bottom: 1px solid var(--line-soft); }
+  .header-row { height: 76px; display: flex; align-items: center; justify-content: space-between; gap: 24px; }
+  .logo { display: flex; align-items: center; gap: 10px; }
+  .logo svg { width: 38px; height: 38px; flex-shrink: 0; }
+  .wordmark { font-family: var(--font-logo); font-weight: 800; font-size: 24px; letter-spacing: -0.02em; color: var(--ink); }
+  .wordmark b { font-weight: 800; color: #FF6A1F; }
+  .nav { display: flex; gap: 36px; font-size: .94rem; }
+  .nav a { color: var(--text-2); }
+  .nav a:hover { color: var(--accent-ink); }
+  .header-actions { display: flex; align-items: center; gap: 18px; }
+  .header-tel { font-size: .92rem; font-weight: 600; white-space: nowrap; color: var(--accent-ink); }
+  .header-actions .btn { min-height: 44px; border-radius: 999px; padding: 0 20px; font-size: .92rem; }
+
+  /* Hero */
+  .hero { position: relative; overflow: hidden; background: var(--bg); }
+  .hero.has-photo { background: linear-gradient(90deg, rgba(11,31,58,.97) 0%, rgba(11,31,58,.88) 50%, rgba(11,31,58,.55) 100%), var(--hero-img) center / cover no-repeat; }
+  .hero-grid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 460px); gap: 56px; align-items: center; padding-top: 64px; padding-bottom: 72px; }
+  .hero-copy { display: flex; flex-direction: column; gap: 26px; min-width: 0; }
+  .pill { align-self: flex-start; display: inline-flex; align-items: center; gap: 10px; padding: 8px 16px; border: 1px solid var(--line-strong); border-radius: 999px; font-size: .88rem; color: var(--text-2); }
+  .dot { width: 8px; height: 8px; border-radius: 50%; background: var(--accent); flex-shrink: 0; }
+  .hero h1 { font-size: clamp(2.1rem, 3.7vw, 3.35rem); line-height: 1.08; letter-spacing: -0.03em; max-width: 17ch; }
+  .hero.is-open .hero-grid { align-items: start; }
+  .hero h1 em { display: block; }
+  .hero-lede { margin: 0; font-size: 1.15rem; line-height: 1.6; color: var(--text-3); max-width: 54ch; }
+
+  /* Étape 1 : barre de recherche */
+  .search { display: flex; align-items: stretch; padding: 8px; background: var(--surface); border: 1px solid var(--line); border-radius: 20px; }
+  .search .field { display: flex; flex-direction: column; gap: 4px; padding: 10px 16px; position: relative; min-width: 0; }
+  .search .field--svc { flex: 1.2; }
+  .search .field--npa { flex: 1; }
+  .search label { white-space: nowrap; font-size: .72rem; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); }
+  .search select, .search input { background: transparent; border: 0; padding: 0; font: 500 1.05rem/1.3 var(--font-body); color: var(--ink); width: 100%; }
+  .search select { appearance: none; -webkit-appearance: none; padding-right: 28px; cursor: pointer; }
+  .search select:focus, .search input:focus { outline: none; }
+  .search .field:focus-within { background: rgba(255,255,255,.05); border-radius: 12px; }
+  .search .chev { position: absolute; right: 16px; bottom: 16px; pointer-events: none; }
+  .search .sep { width: 1px; background: var(--line); margin: 10px 0; }
+  .search .btn { min-height: 64px; padding: 0 22px; border-radius: 14px; font-size: 1.02rem; }
+  select option { background: var(--surface); color: var(--ink); }
+  ::placeholder { color: var(--placeholder); }
+
+  .check-list { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 10px 26px; font-size: .95rem; color: var(--text-2); }
+  .check-list li { display: flex; align-items: center; gap: 8px; }
+  .check-list svg { color: var(--accent); flex-shrink: 0; }
+
+  .match-mini { display: none; align-items: center; gap: 14px; padding: 14px 16px; background: var(--surface); border: 1px solid var(--line); border-radius: 16px; }
+  .match-mini .ico { width: 52px; height: 52px; flex-shrink: 0; border-radius: 50%; background: #0B1F3A; border: 1px solid #2F5282; display: flex; align-items: center; justify-content: center; }
+  .match-mini strong { display: block; font-size: .95rem; font-weight: 600; }
+  .match-mini span { font-size: .84rem; color: var(--text-3); }
+
+  /* Illustration */
+  .hero-side { min-width: 0; }
+  .visual { position: relative; width: 100%; aspect-ratio: 560 / 580; }
+  .ring { position: absolute; border-radius: 50%; left: 50%; top: 50%; transform: translate(-50%, -50%); aspect-ratio: 1; }
+  .ring--1 { width: 92.8%; border: 1px solid rgba(255,106,31,.12); }
+  .ring--2 { width: 67.8%; border: 1px solid rgba(255,106,31,.18); }
+  .ring--3 { width: 42.8%; border: 1px dashed rgba(255,106,31,.28); animation: spin 60s linear infinite; }
+  @keyframes spin { to { transform: translate(-50%, -50%) rotate(360deg); } }
+  .links { position: absolute; inset: 0; width: 100%; height: 100%; }
+  .links path { animation: dash 3s linear infinite; }
+  @keyframes dash { to { stroke-dashoffset: -20; } }
+  .node { position: absolute; left: 50%; top: 50%; width: 22.8%; aspect-ratio: 1; transform: translate(-50%, -50%); border-radius: 50%; background: var(--surface); border: 1px solid var(--accent); display: flex; align-items: center; justify-content: center; color: var(--accent); box-shadow: 0 0 0 10px rgba(255,106,31,.06); }
+  .node svg { width: 52%; height: auto; }
+  .vcard { position: absolute; width: 56%; padding: 20px; background: var(--surface); border: 1px solid var(--line); border-radius: 18px; display: flex; flex-direction: column; gap: 12px; box-shadow: var(--shadow); }
+  .vcard--req { left: 0; top: 6%; animation: float 6s ease-in-out infinite; }
+  .vcard--pro { right: 0; top: 62%; gap: 14px; animation: float 6s ease-in-out -3s infinite; }
+  @keyframes float { 50% { transform: translateY(-8px); } }
+  .vkicker { display: flex; align-items: center; gap: 8px; font-size: .72rem; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); }
+  .vkicker .dot { width: 7px; height: 7px; background: var(--accent-hi); }
+  .vtitle { font-family: var(--font-display); font-weight: 600; font-size: 1.15rem; line-height: 1.2; }
+  .vmeta { display: flex; flex-direction: column; gap: 6px; font-size: .86rem; color: var(--text-3); }
+  .vmeta div { display: flex; align-items: center; gap: 8px; min-width: 0; }
+  .vmeta span { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  .pro-head { display: flex; align-items: center; gap: 12px; }
+  .avatar { width: 44px; height: 44px; border-radius: 50%; background: #0B1F3A; border: 1px solid #2F5282; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+  .pro-name { font-size: .98rem; font-weight: 600; }
+  .pro-sub { font-size: .86rem; color: var(--text-3); }
+  .pro-foot { display: flex; align-items: center; justify-content: space-between; gap: 8px; padding-top: 14px; border-top: 1px solid var(--line); font-size: .86rem; color: var(--text-3); }
+  .badge { display: inline-flex; align-items: center; gap: 6px; padding: 6px 12px; border-radius: 999px; background: var(--accent); color: #0B1F3A; font-size: .8rem; font-weight: 600; }
+
+  /* Carte formulaire (étapes 2 et 3) */
+  .form-card { display: none; background: var(--surface); border: 1px solid var(--line); border-radius: 22px; padding: clamp(20px, 4vw, 30px); box-shadow: var(--shadow); }
+  .hero.is-open .form-card { display: block; }
+  .hero.is-open .visual, .hero.is-open .match-mini { display: none !important; }
+  .form-card h2 { font-size: 1.4rem; line-height: 1.2; }
+  .form-card h2:focus { outline: none; }
+  .form-card .sub { font-size: .9rem; color: var(--text-3); margin: 8px 0 0; }
+  .recap { margin-top: 18px; display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 6px 6px 6px 16px; background: var(--bg); border: 1px solid var(--line); border-radius: 12px; font-size: .9rem; }
+  .recap span { display: flex; align-items: center; gap: 8px; min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  .link-btn { min-height: 40px; padding: 0 12px; border: 0; background: transparent; color: var(--accent-ink); font: 600 .86rem var(--font-body); text-decoration: underline; text-underline-offset: 3px; cursor: pointer; border-radius: 8px; flex-shrink: 0; }
+  .progress { margin-top: 18px; }
+  .progress-label { display: flex; justify-content: space-between; font-size: .76rem; color: var(--muted); font-weight: 500; }
+  .progress-bar { height: 6px; background: var(--surface-2); border-radius: 99px; margin-top: 8px; overflow: hidden; }
+  .progress-bar span { display: block; height: 100%; width: 33%; background: var(--accent); border-radius: 99px; transition: width .3s ease; }
+  #leadForm { margin-top: 20px; }
+  fieldset.pane { border: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 14px; min-width: 0; }
+  .q { font-size: .92rem; font-weight: 600; color: var(--ink); padding: 0; margin-bottom: 2px; }
+  .form-card .field { display: flex; flex-direction: column; gap: 6px; }
+  .form-card .field > label, .field-label { font-size: .8rem; color: var(--text-3); font-weight: 500; }
+  .row-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+  @media (max-width: 420px) { .row-2 { grid-template-columns: 1fr; } }
+  .form-card input, .form-card select, .form-card textarea { font: inherit; font-size: 16px; padding: 12px 13px; border: 1px solid var(--line); border-radius: 10px; background: var(--bg); color: var(--ink); width: 100%; transition: border-color .15s, box-shadow .15s; color-scheme: light; }
+  .form-card select { appearance: none; -webkit-appearance: none; padding-right: 36px; background: var(--bg) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%235B687B' stroke-width='2' stroke-linecap='round'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E") right 12px center / 16px no-repeat; }
+  .form-card input:hover, .form-card select:hover, .form-card textarea:hover { border-color: var(--line-strong); }
+  .form-card input:focus, .form-card select:focus, .form-card textarea:focus { outline: none; border-color: var(--accent); box-shadow: 0 0 0 4px var(--accent-soft); }
+  textarea { resize: vertical; min-height: 76px; }
+  .tiles { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+  .tile { position: relative; }
+  .tile input { position: absolute; opacity: 0; width: 1px; height: 1px; }
+  .tile label { display: flex; align-items: center; height: 100%; min-height: 48px; padding: 10px 12px; border: 1px solid var(--line); border-radius: 10px; background: var(--bg); font-size: .88rem; font-weight: 500; color: var(--ink); cursor: pointer; transition: border-color .15s, background .15s; }
+  .tile label:hover { border-color: var(--line-strong); }
+  .tile input:checked + label { border-color: var(--accent); background: var(--accent-soft); box-shadow: inset 0 0 0 1px var(--accent); }
+  .tile input:focus-visible + label { box-shadow: 0 0 0 4px var(--accent-soft), inset 0 0 0 1px var(--accent); }
+  .form-nav { display: flex; gap: 10px; margin-top: 4px; }
+  .form-nav .btn { flex: 1; min-height: 52px; }
+  .form-nav .btn.ghost { flex: 0 0 auto; }
+  .optional { font-weight: 400; color: var(--muted); }
+  .consent { display: flex; gap: 10px; align-items: flex-start; font-size: .8rem; color: var(--text-3); line-height: 1.45; cursor: pointer; }
+  .consent input { width: 18px !important; height: 18px; flex-shrink: 0; margin-top: 1px; padding: 0 !important; accent-color: var(--accent); }
+  .consent a { color: var(--accent-ink); text-decoration: underline; }
+  .hp { position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden; }
+  .form-error { display: none; font-size: .86rem; color: #8A2E12; background: var(--warn-soft); border: 1px solid #F4C3B2; padding: 10px 12px; border-radius: 10px; }
+  .form-error.show { display: block; }
+  .addon { display: flex; gap: 12px; align-items: flex-start; padding: 13px 14px; border: 1px solid var(--accent-line); border-radius: 10px; background: var(--accent-soft); cursor: pointer; }
+  .addon input { width: 20px !important; height: 20px; flex-shrink: 0; margin: 1px 0 0; padding: 0 !important; accent-color: var(--accent); }
+  .addon strong { display: block; font-size: .92rem; font-weight: 600; }
+  .addon small { display: block; font-size: .8rem; color: var(--text-3); margin-top: 2px; }
+  .success { display: none; }
+  .success.show { display: block; }
+  .success .check { width: 56px; height: 56px; border-radius: 50%; background: var(--accent); color: #0B1F3A; display: flex; align-items: center; justify-content: center; margin-bottom: 18px; box-shadow: 0 0 0 8px var(--accent-soft); }
+  .success ol { padding-left: 18px; font-size: .94rem; color: var(--text-3); margin: 18px 0 0; }
+  .success li + li { margin-top: 8px; }
+
+  /* Bandeau services du hero */
+  .strip { border-top: 1px solid var(--line-soft); }
+  .strip .wrap { display: flex; align-items: center; gap: 12px; padding-top: 24px; padding-bottom: 24px; flex-wrap: wrap; }
+  .strip-label { font-size: .78rem; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); margin-right: 10px; }
+  .chip { display: inline-flex; align-items: center; gap: 8px; min-height: 44px; padding: 0 18px; border: 1px solid var(--line); border-radius: 999px; font-size: .94rem; color: var(--ink); transition: border-color .2s; }
+  a.chip:hover { border-color: var(--accent); color: var(--ink); }
+  .chip svg { width: 18px; height: 18px; color: var(--accent-ink); flex-shrink: 0; }
+
+  /* Services */
+  .service-grid { margin-top: 44px; display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px; }
+  .service-card { display: flex; flex-direction: column; gap: 10px; padding: 24px; border: 1px solid var(--line); border-radius: var(--radius); background: var(--surface); transition: border-color .2s, transform .2s; }
+  .service-card:hover { border-color: var(--accent-line); transform: translateY(-3px); color: var(--ink); }
+  .ico-box { width: 48px; height: 48px; padding: 12px; border-radius: 12px; background: var(--accent-soft); color: var(--accent-ink); flex-shrink: 0; }
+  .service-card strong { font-family: var(--font-display); font-weight: 600; font-size: 1.12rem; line-height: 1.2; margin-top: 6px; }
+  .service-card span { font-size: .92rem; color: var(--text-3); }
+  .service-card .go { font-size: .88rem; font-weight: 600; color: var(--accent-ink); margin-top: auto; padding-top: 8px; }
+  .option-strip { margin-top: 16px; display: flex; align-items: center; gap: 16px; padding: 20px 24px; border-radius: var(--radius); background: var(--accent-soft); border: 1px solid var(--accent-line); }
+  .option-strip .ico-box { background: var(--bg); }
+  .option-strip strong { display: block; font-family: var(--font-display); font-weight: 600; font-size: 1.05rem; }
+  .option-strip span { font-size: .92rem; color: var(--text-3); }
+
+  /* Pourquoi un seul pro */
+  .compare-grid { margin-top: 44px; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; }
+  .cmp { position: relative; padding: 30px; border-radius: var(--radius); border: 1px solid var(--line); background: var(--surface); }
+  .cmp.us { border-color: var(--accent-line); box-shadow: var(--shadow); }
+  .cmp-label { font-size: .78rem; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); }
+  .cmp.us .cmp-label { color: var(--accent-ink); }
+  .cmp-num { margin-top: 10px; font-family: var(--font-display); font-weight: 800; font-size: clamp(2rem, 4vw, 2.8rem); letter-spacing: -0.03em; line-height: 1; color: var(--muted); }
+  .cmp.us .cmp-num { color: var(--ink); }
+  .cmp.us .cmp-num span { color: var(--accent-ink); }
+  .cmp ul { list-style: none; margin: 22px 0 0; padding: 0; display: grid; gap: 12px; }
+  .cmp li { display: flex; gap: 10px; align-items: flex-start; font-size: .97rem; color: var(--text-2); }
+  .cmp li svg { flex-shrink: 0; margin-top: 3px; }
+  .cmp.them li svg { color: var(--muted); }
+  .cmp.us li svg { color: var(--accent-ink); }
+
+  /* Prix indicatifs */
+  .price-grid { margin-top: 44px; display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 16px; }
+  .price-card { padding: 24px; border: 1px solid var(--line); border-radius: var(--radius); background: var(--surface); display: flex; flex-direction: column; gap: 16px; transition: border-color .2s, box-shadow .2s; }
+  .price-card.is-active { border-color: var(--accent); box-shadow: inset 0 0 0 1px var(--accent), var(--shadow); }
+  .price-head { display: flex; align-items: center; gap: 12px; }
+  .price-head .ico-box { width: 40px; height: 40px; padding: 10px; }
+  .price-card h3 { font-size: 1.05rem; line-height: 1.25; }
+  .price-card dl { margin: 0; display: grid; gap: 10px; }
+  .price-row { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; padding-bottom: 10px; border-bottom: 1px dashed var(--line); font-size: .92rem; }
+  .price-row dt { color: var(--text-3); }
+  .price-row dd { margin: 0; font-weight: 600; white-space: nowrap; color: var(--ink); }
+  .price-card .go { margin-top: auto; font-size: .88rem; font-weight: 600; color: var(--accent-ink); }
+  .price-foot { margin-top: 20px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px 24px; }
+  .price-note { margin: 0; font-size: .86rem; color: var(--muted); max-width: 70ch; }
+  .price-extra { display: inline-flex; align-items: center; gap: 8px; font-size: .9rem; color: var(--text-2); }
+  .price-extra svg { width: 18px; height: 18px; color: var(--accent-ink); }
+
+  /* Professionnels du bâtiment */
+  .pro-band { background: var(--bg); padding: 96px 0; }
+  .pro-grid { display: grid; grid-template-columns: minmax(0, 1.05fr) minmax(0, .95fr); gap: 56px; align-items: center; }
+  .pro-band h2 { font-size: clamp(1.9rem, 3.4vw, 2.75rem); line-height: 1.08; margin-top: 14px; max-width: 18ch; }
+  .pro-band .btn { margin-top: 28px; }
+  .pro-card { padding: 28px; border-radius: var(--radius); background: var(--surface); border: 1px solid var(--line); }
+  .pro-list { list-style: none; margin: 0; padding: 0; display: grid; gap: 16px; }
+  .pro-list li { display: flex; gap: 12px; align-items: flex-start; color: var(--text-2); font-size: .98rem; }
+  .pro-list li svg { flex-shrink: 0; margin-top: 3px; color: var(--accent); }
+  .pro-list strong { color: var(--ink); font-weight: 600; }
+
+  /* Note avis (uniquement si CONFIG.avis est renseigné) */
+  .rating { display: inline-flex; align-items: center; gap: 8px; font-size: .92rem; color: var(--text-2); }
+  .rating .stars { color: var(--accent); letter-spacing: 2px; }
+  .rating strong { color: var(--ink); }
+  .foot-contact { margin-top: 12px; }
+
+  /* Étapes */
+  .steps-grid { margin-top: 48px; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; }
+  .step { padding: 28px; border-radius: var(--radius); background: var(--surface); border: 1px solid var(--line); }
+  .step .num { display: inline-flex; align-items: center; justify-content: center; width: 44px; height: 44px; border-radius: 50%; border: 1px solid var(--accent-line); color: var(--accent); font-family: var(--font-display); font-weight: 700; font-size: .95rem; }
+  .step h3 { font-size: 1.12rem; margin-top: 18px; }
+  .step p { font-size: .95rem; color: var(--text-3); margin: 8px 0 0; }
+
+  /* Zone */
+  .chip-row { margin-top: 32px; display: flex; flex-wrap: wrap; gap: 8px; }
+  .chip-row .chip { min-height: 40px; font-size: .9rem; padding: 0 16px; background: var(--surface); }
+
+  /* Témoignages */
+  .testi-grid { margin-top: 40px; display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 18px; }
+  .testi { margin: 0; padding: 28px; background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); }
+  .testi p { margin: 0; font-family: var(--font-display); font-weight: 500; font-size: 1.02rem; line-height: 1.45; }
+  .testi cite { display: block; margin-top: 16px; font-style: normal; font-size: .84rem; font-weight: 600; color: var(--muted); }
+
+  /* FAQ */
+  .faq { margin-top: 36px; max-width: 820px; display: grid; gap: 10px; }
+  .faq details { border: 1px solid var(--line); border-radius: var(--radius); padding: 20px 22px; background: var(--surface); transition: border-color .15s; }
+  .faq details[open] { border-color: var(--accent-line); }
+  .faq summary { cursor: pointer; font-weight: 600; font-size: 1.02rem; list-style: none; display: flex; justify-content: space-between; align-items: center; gap: 16px; }
+  .faq summary::-webkit-details-marker { display: none; }
+  .faq summary::after { content: "+"; flex-shrink: 0; width: 28px; height: 28px; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; background: var(--accent-soft); color: var(--accent-ink); font-size: 1.15rem; line-height: 1; transition: transform .2s; }
+  .faq details[open] summary::after { transform: rotate(45deg); }
+  .faq details p { margin: 12px 0 0; color: var(--text-3); font-size: .96rem; max-width: 66ch; }
+
+  /* CTA final */
+  .final-cta { position: relative; overflow: hidden; background: var(--bg); }
+  .final-cta::before, .final-cta::after { content: ""; position: absolute; border-radius: 50%; border: 1px solid rgba(255,106,31,.14); right: -120px; top: 50%; transform: translateY(-50%); pointer-events: none; }
+  .final-cta::before { width: 520px; height: 520px; }
+  .final-cta::after { width: 340px; height: 340px; right: -30px; border-style: dashed; border-color: rgba(255,106,31,.22); }
+  .final-cta .wrap { position: relative; padding-top: 80px; padding-bottom: 80px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 28px; }
+  .final-cta h2 { font-size: clamp(1.8rem, 3.4vw, 2.75rem); line-height: 1.08; max-width: 18ch; }
+  .final-cta p { margin: 12px 0 0; color: var(--text-3); }
+  .final-cta .btn { min-height: 58px; padding: 0 30px; font-size: 1.05rem; }
+
+  /* Footer */
+  footer { padding: 56px 0 110px; font-size: .84rem; color: var(--muted); background: var(--footer); border-top: 1px solid var(--line-soft); }
+  footer h3 { font-family: var(--font-body); font-size: .95rem; font-weight: 600; color: var(--ink); margin-bottom: 12px; }
+  .foot-grid { display: grid; grid-template-columns: 1fr 2fr; gap: 40px; }
+  footer p { margin: 0 0 8px; max-width: 72ch; }
+  footer .logo { margin-bottom: 14px; }
+  footer a { text-decoration: underline; }
+
+  /* Barre mobile fixe */
+  .mobile-bar { display: none; }
+
+  /* Responsive */
+  @media (max-width: 1180px) {
+    .wrap { padding: 0 40px; }
+    .nav { gap: 24px; }
+    .hero-grid { gap: 40px; grid-template-columns: minmax(0, 1fr) minmax(0, 420px); }
+    .search { flex-wrap: wrap; }
+    .search .btn { flex: 1 0 100%; min-height: 56px; margin-top: 6px; }
+  }
+  @media (max-width: 980px) {
+    .nav { display: none; }
+    .hero-grid { grid-template-columns: 1fr; padding-top: 40px; padding-bottom: 48px; gap: 28px; }
+    .hero-copy { max-width: 680px; }
+    .visual { display: none; }
+    .match-mini { display: flex; }
+    .form-card { max-width: 680px; }
+    .steps-grid { grid-template-columns: 1fr; }
+    .foot-grid { grid-template-columns: 1fr; }
+    .compare-grid, .pro-grid { grid-template-columns: 1fr; }
+    .pro-grid { gap: 32px; }
+  }
+  @media (max-width: 640px) {
+    .wrap { padding: 0 20px; }
+    section.block { padding: 64px 0; }
+    .header-row { height: 64px; }
+    .logo svg { width: 36px; height: 25px; }
+    .wordmark { font-size: 18px; }
+    .header-tel, .header-actions .btn { display: none; }
+    .hero-grid { padding-top: 24px; padding-bottom: 32px; }
+    .hero-copy { gap: 18px; }
+    .pill { font-size: .8rem; padding: 6px 12px; }
+    .pill .full { display: none; }
+    .hero h1 em { display: inline; }
+    .hero-lede { font-size: 1rem; }
+    .search { flex-direction: column; border-radius: 18px; }
+    .search .field { padding: 10px 12px; }
+    .search .chev { right: 14px; bottom: 14px; }
+    .search .sep { width: auto; height: 1px; margin: 0 12px; }
+    .search .btn { min-height: 56px; margin-top: 6px; border-radius: 12px; }
+    .check-list { flex-direction: column; gap: 8px; font-size: .9rem; }
+    .strip .wrap { flex-wrap: nowrap; overflow-x: auto; padding-top: 16px; padding-bottom: 20px; scrollbar-width: none; }
+    .strip .wrap::-webkit-scrollbar { display: none; }
+    .strip-label { display: none; }
+    .strip .chip { flex-shrink: 0; font-size: .88rem; padding: 0 16px; }
+    .service-grid, .price-grid { grid-template-columns: 1fr; }
+    .price-grid .price-row dt { min-width: 0; }
+    .pro-band { padding: 64px 0; }
+    .cmp, .pro-card { padding: 22px; }
+    .final-cta .wrap { padding-top: 56px; padding-bottom: 56px; }
+    .final-cta .btn { width: 100%; }
+    .mobile-bar { display: flex; gap: 8px; position: fixed; left: 0; right: 0; bottom: 0; z-index: 30; padding: 10px 12px calc(10px + env(safe-area-inset-bottom, 0px)); background: rgba(255,255,255,.95); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); border-top: 1px solid var(--line); transition: transform .2s ease; }
+    .mobile-bar.hide { transform: translateY(110%); }
+    .mobile-bar .btn { flex: 1; min-height: 50px; }
+    .mobile-bar .btn.ghost { flex: 0 0 auto; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    *, *::before, *::after { animation: none !important; transition: none !important; }
+  }
+</style>
 </head>
 <body>
-<div class="demo-banner" id="demoBanner">Mode démo : le formulaire n'est pas branché, les demandes ne sont enregistrées nulle part.</div>
-<header class="site-header">
-<div class="wrap header-row">
-<a class="brand" href="./" aria-label="MatchPro, accueil"><svg class="brand-mark" viewBox="0 0 32 32" aria-hidden="true"><circle cx="12" cy="16" r="8.5"/><circle cx="20" cy="16" r="8.5"/></svg><span class="wordmark">MatchPro</span></a>
-<nav class="main-nav" aria-label="Navigation principale">
-<a href="./" aria-current="page">Accueil</a>
-<a href="nettoyage-fin-de-bail/">Fin de bail</a>
-<a href="nettoyage-fin-de-chantier/">Fin de chantier</a>
-<a href="nettoyage-bureaux/">Bureaux &amp; immeubles</a>
-</nav>
-<a class="btn btn-primary header-cta" href="#devis">Demander un devis</a>
-<button type="button" class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="mobileMenu" aria-label="Ouvrir le menu"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
-</div>
-<nav class="mobile-menu" id="mobileMenu" aria-label="Menu mobile">
-<a href="./" aria-current="page">Accueil</a>
-<a href="nettoyage-fin-de-bail/">Fin de bail</a>
-<a href="nettoyage-fin-de-chantier/">Fin de chantier</a>
-<a href="nettoyage-bureaux/">Bureaux &amp; immeubles</a>
-<a class="btn btn-primary" href="#devis">Demander un devis</a>
-</nav>
+
+<!-- Symboles réutilisables -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="mp-icon" viewBox="0 0 48 48">
+      <rect width="48" height="48" rx="12" fill="#0B1F3A"/>
+      <path d="M11.5 14l7 15.5 18-15.5" fill="none" stroke="#FF6A1F" stroke-width="5.5" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M11.5 34V14M36.5 34V14" fill="none" stroke="#fff" stroke-width="5.5" stroke-linecap="round" stroke-linejoin="round"/>
+    </symbol>
+    <!-- Signe du logo (V orange, jambages blancs) dans un rond bleu nuit, pour les mentions « un seul pro de votre région » -->
+    <symbol id="mp-mark-badge" viewBox="8.5 11 31 26">
+      <path d="M11.5 14l7 15.5 18-15.5" fill="none" stroke="#FF6A1F" stroke-width="5.5" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M11.5 34V14M36.5 34V14" fill="none" stroke="#FFFFFF" stroke-width="5.5" stroke-linecap="round" stroke-linejoin="round"/>
+    </symbol>
+    <symbol id="pm-check" viewBox="0 0 24 24">
+      <path d="M5 12.5l4.5 4.5L19 7" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"/>
+    </symbol>
+    <symbol id="pm-x" viewBox="0 0 24 24">
+      <path d="M7 7l10 10M17 7L7 17" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/>
+    </symbol>
+    <symbol id="pm-arrow" viewBox="0 0 24 24">
+      <path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+    </symbol>
+  </defs>
+</svg>
+
+<div class="demo-banner" id="demoBanner">Mode démo — formulaire non connecté : les demandes ne sont enregistrées nulle part. Renseigner CONFIG.endpoint avant mise en ligne.</div>
+
+<header class="site">
+  <div class="wrap header-row">
+    <a href="#" class="logo" aria-label="MatchPro, accueil">
+      <svg viewBox="0 0 48 48" aria-hidden="true"><use href="#mp-icon"/></svg>
+      <span class="wordmark">Match<b>Pro</b></span>
+    </a>
+    <nav class="nav" aria-label="Navigation principale">
+      <a href="#services">Services</a>
+      <a href="#prix">Prix</a>
+      <a href="#comment">Comment ça marche</a>
+      <a href="#pros">Professionnels</a>
+      <a href="#faq">FAQ</a>
+    </nav>
+    <div class="header-actions">
+      <a class="header-tel" id="headerTel" href="#" hidden></a>
+      <a class="btn" href="#devis">Devis gratuit</a>
+    </div>
+  </div>
 </header>
 
 <main>
+<!-- HERO + FORMULAIRE -->
 <section class="hero">
-<div class="wrap hero-grid">
-<div class="hero-copy">
-<span class="eyebrow">Nettoyage · Suisse romande</span>
-<h1>Trouvez une entreprise de nettoyage en Suisse romande.</h1>
-<p class="lead">Fin de bail, fin de chantier, bureaux et immeubles : décrivez votre besoin en une minute. MatchPro transmet votre demande à une entreprise de nettoyage partenaire, qui vous recontacte avec un devis.</p>
-<ul class="ticks"><li><svg class="ico ico-sm" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12l5 5 9-10"/></svg>Gratuit pour vous</li><li><svg class="ico ico-sm" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12l5 5 9-10"/></svg>Sans engagement</li><li><svg class="ico ico-sm" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12l5 5 9-10"/></svg>Particuliers, régies, entreprises</li></ul>
-<p class="note-line">MatchPro n'est pas une entreprise de nettoyage : c'est un service de mise en relation. Le devis et l'intervention sont assurés par l'entreprise partenaire.</p>
-</div>
-<div class="form-card" id="devis">
-<div id="formPane">
-<h2 class="form-title">Demande de devis gratuite</h2>
-<p class="muted small">Gratuit et sans engagement. Votre demande est transmise à une entreprise de nettoyage partenaire.</p>
-<div class="progress" aria-hidden="true"><div class="progress-label"><span id="stepLabel">Étape 1 sur 3</span><span id="stepName">Votre besoin</span></div><div class="progress-bar"><span id="progressFill"></span></div></div>
-<noscript><p class="noscript-note">Le formulaire a besoin de JavaScript. Activez-le dans votre navigateur pour envoyer votre demande.</p></noscript>
-<form id="leadForm" novalidate>
-<fieldset class="pane" data-step="1">
-<legend class="q">Quel nettoyage vous faut-il ?</legend>
-<div class="tiles"><div class="tile"><input type="radio" id="s-fin-de-bail" name="service" value="fin-de-bail" required><label for="s-fin-de-bail"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 3.5h10v17H7z"/><circle cx="14" cy="12" r=".9"/></svg>Fin de bail</label></div><div class="tile"><input type="radio" id="s-chantier" name="service" value="chantier"><label for="s-chantier"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 21V11l8-6 8 6v10"/><path d="M9 21v-6h6v6"/></svg>Fin de chantier</label></div><div class="tile"><input type="radio" id="s-bureaux" name="service" value="bureaux"><label for="s-bureaux"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="3" width="14" height="18"/><path d="M9 7h.01M12 7h.01M15 7h.01M9 11h.01M12 11h.01M15 11h.01M9 15h.01M12 15h.01M15 15h.01"/></svg>Bureaux &amp; immeubles</label></div></div>
-<div class="row-2">
-<div class="field"><label for="canton">Canton</label><select id="canton" name="canton" required><option value="" disabled selected>Choisir…</option><option value="VD">Vaud</option><option value="GE">Genève</option><option value="FR">Fribourg</option><option value="VS">Valais</option><option value="NE">Neuchâtel</option><option value="JU">Jura</option></select></div>
-<div class="field"><label for="localite">NPA et localité</label><input type="text" id="localite" name="localite" placeholder="ex. 1004 Lausanne" autocomplete="postal-code" required></div>
-</div>
-<div class="nav-btns"><button type="button" class="btn btn-primary" data-next>Continuer</button></div>
-</fieldset>
-<fieldset class="pane" data-step="2" hidden>
-<legend class="q">Quelques détails pour un devis juste</legend>
-<div id="detailFields" class="stack"></div>
-<div class="field"><span class="field-label">Vous êtes</span>
-<div class="tiles">
-<div class="tile"><input type="radio" id="p1" name="profil" value="particulier" required><label for="p1">Particulier</label></div>
-<div class="tile"><input type="radio" id="p2" name="profil" value="regie"><label for="p2">Régie / gérance</label></div>
-<div class="tile"><input type="radio" id="p3" name="profil" value="entreprise"><label for="p3">Entreprise / commerce</label></div>
-<div class="tile"><input type="radio" id="p4" name="profil" value="pro-batiment"><label for="p4">Architecte / entrepreneur</label></div>
-</div></div>
-<div class="field"><label for="commentaire">Précisions <span class="muted">(facultatif)</span></label><textarea id="commentaire" name="commentaire" placeholder="Accès, étage, état des lieux, type de sol…"></textarea></div>
-<div class="nav-btns"><button type="button" class="btn btn-outline" data-prev>Retour</button><button type="button" class="btn btn-primary" data-next>Continuer</button></div>
-</fieldset>
-<fieldset class="pane" data-step="3" hidden>
-<legend class="q">Où l'entreprise peut-elle vous joindre ?</legend>
-<div class="field"><label for="nom">Prénom et nom</label><input type="text" id="nom" name="nom" autocomplete="name" required></div>
-<div class="field"><label for="tel">Téléphone</label><input type="tel" id="tel" name="tel" placeholder="079 000 00 00" autocomplete="tel" inputmode="tel" required></div>
-<div class="field"><label for="email">E-mail <span class="muted">(facultatif)</span></label><input type="email" id="email" name="email" autocomplete="email"></div>
-<div class="hp" aria-hidden="true"><label for="website">Ne pas remplir</label><input type="text" id="website" name="website" tabindex="-1" autocomplete="off"></div>
-<label class="consent"><input type="checkbox" id="consent" name="consent" value="oui" required><span>J'accepte que MatchPro transmette ma demande et mes coordonnées à une entreprise de nettoyage partenaire, uniquement pour établir un devis. <a href="mentions-legales/" target="_blank" rel="noopener">Protection des données</a></span></label>
-<div class="form-error" id="formError"></div>
-<div class="nav-btns"><button type="button" class="btn btn-outline" data-prev>Retour</button><button type="submit" class="btn btn-primary" id="submitBtn">Recevoir mon devis</button></div>
-</fieldset>
-</form>
-</div>
-<div class="success" id="successPane" role="status" aria-live="polite">
-<div class="success-check">✓</div>
-<h2 class="form-title">Demande bien reçue</h2>
-<p class="muted" id="successText">Votre demande est transmise à une entreprise de nettoyage partenaire.</p>
-<ol><li>Gardez votre téléphone à portée : l'entreprise vous appelle pour préciser votre besoin.</li><li>Préparez 2 à 3 photos des lieux : elles permettent souvent un devis sans visite.</li><li>Le devis est gratuit, vous êtes libre de ne pas donner suite.</li></ol>
-</div>
-</div>
-</div>
+  <div class="wrap hero-grid">
+
+    <div class="hero-copy">
+      <div class="pill"><span class="dot"></span><span id="heroEyebrow">Suisse romande · VD · GE · FR · VS · JU</span></div>
+      <h1 id="heroTitle"><span id="h1Main">Les meilleurs pros,</span> <em id="h1Accent">au bon moment.</em></h1>
+      <p class="hero-lede" id="heroLede"></p>
+
+      <!-- ÉTAPE 1 : besoin + localisation (champs rattachés au formulaire #leadForm) -->
+      <div class="search" id="devis" data-step="1">
+        <div class="field field--svc">
+          <label for="service">Service</label>
+          <select id="service" name="service" form="leadForm" required></select>
+          <svg class="chev" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#9DB0C8" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+        </div>
+        <div class="sep" aria-hidden="true"></div>
+        <div class="field field--npa">
+          <label for="localite">NPA et localité</label>
+          <input type="text" id="localite" name="localite" form="leadForm" placeholder="ex. 1110 Morges" autocomplete="postal-code" required>
+        </div>
+        <button type="button" class="btn" data-next>Trouver mon pro<svg width="18" height="18" aria-hidden="true"><use href="#pm-arrow"/></svg></button>
+      </div>
+
+      <ul class="check-list" id="heroPoints"></ul>
+      <div class="rating" id="heroRating" hidden></div>
+
+      <div class="match-mini" aria-hidden="true">
+        <div class="ico"><svg width="28" height="24"><use href="#mp-mark-badge"/></svg></div>
+        <div><strong>Un seul pro de votre région</strong><span id="miniText">Il vous rappelle avec un devis.</span></div>
+      </div>
+    </div>
+
+    <div class="hero-side">
+      <!-- Illustration (remplacée par la carte formulaire dès l'étape 2) -->
+      <div class="visual" aria-hidden="true">
+        <div class="ring ring--1"></div>
+        <div class="ring ring--2"></div>
+        <div class="ring ring--3"></div>
+        <svg class="links" viewBox="0 0 560 580" fill="none" preserveAspectRatio="none">
+          <path d="M150 214C150 262 176 290 216 290" stroke="#FF6A1F" stroke-width="1.5" stroke-dasharray="4 6" stroke-linecap="round"/>
+          <path d="M344 290C384 290 410 318 410 366" stroke="#FF6A1F" stroke-width="1.5" stroke-dasharray="4 6" stroke-linecap="round"/>
+        </svg>
+        <div class="node"><svg viewBox="0 0 48 48"><use href="#mp-icon"/></svg></div>
+        <div class="vcard vcard--req">
+          <div class="vkicker"><span class="dot"></span>Votre demande</div>
+          <div class="vtitle" id="vizService">Nettoyage</div>
+          <div class="vmeta">
+            <div><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#9DB0C8" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-6-5.5-6-11a6 6 0 0 1 12 0c0 5.5-6 11-6 11z"/><circle cx="12" cy="10" r="2"/></svg><span id="vizLieu">Suisse romande</span></div>
+            <div><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#9DB0C8" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg><span id="vizDelai">Rappel rapide</span></div>
+          </div>
+        </div>
+        <div class="vcard vcard--pro">
+          <div class="pro-head">
+            <div class="avatar"><svg width="24" height="20"><use href="#mp-mark-badge"/></svg></div>
+            <div><div class="pro-name">Un pro partenaire</div><div class="pro-sub">Entreprise de votre région</div></div>
+          </div>
+          <div class="pro-foot">
+            <span>Un seul interlocuteur</span>
+            <span class="badge"><svg width="14" height="14"><use href="#pm-check"/></svg>Match</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- ÉTAPES 2 et 3 -->
+      <div class="form-card" id="formCard">
+        <div id="formPane">
+          <h2 id="formTitle" tabindex="-1">Votre devis gratuit en 1 minute</h2>
+          <p class="sub">Sans engagement. Vos coordonnées ne sont transmises qu'à un seul professionnel.</p>
+
+          <div class="recap">
+            <span><svg width="16" height="16" style="color:var(--accent)" aria-hidden="true"><use href="#pm-check"/></svg><span id="recapText"></span></span>
+            <button type="button" class="link-btn" data-edit>Modifier</button>
+          </div>
+
+          <div class="progress" aria-hidden="true">
+            <div class="progress-label"><span id="stepLabel">Étape 2 sur 3</span><span id="stepName">Détails</span></div>
+            <div class="progress-bar"><span id="progressFill"></span></div>
+          </div>
+
+          <form id="leadForm" novalidate>
+            <!-- Étape 2 : qualification -->
+            <fieldset class="pane" data-step="2" hidden>
+              <legend class="q">Quelques détails pour un devis juste</legend>
+              <div class="field">
+                <label for="canton">Canton</label>
+                <select id="canton" name="canton" required><option value="" disabled selected>Choisir…</option></select>
+              </div>
+              <div id="detailFields" style="display:flex;flex-direction:column;gap:14px;"></div>
+              <div class="field">
+                <span class="field-label">Vous êtes</span>
+                <div class="tiles">
+                  <div class="tile"><input type="radio" id="p1" name="profil" value="particulier" required><label for="p1">Particulier</label></div>
+                  <div class="tile"><input type="radio" id="p2" name="profil" value="regie"><label for="p2">Régie / gérance</label></div>
+                  <div class="tile"><input type="radio" id="p3" name="profil" value="entreprise"><label for="p3">Entreprise / commerce</label></div>
+                  <div class="tile"><input type="radio" id="p4" name="profil" value="pro-batiment"><label for="p4">Architecte / entrepreneur</label></div>
+                </div>
+              </div>
+              <div class="field">
+                <label for="commentaire">Précisions <span class="optional">(facultatif)</span></label>
+                <textarea id="commentaire" name="commentaire" placeholder="Accès, étage, état des lieux, type de sol, parking…"></textarea>
+              </div>
+              <div class="form-nav">
+                <button type="button" class="btn ghost" data-prev>Retour</button>
+                <button type="button" class="btn" data-next>Continuer</button>
+              </div>
+            </fieldset>
+
+            <!-- Étape 3 : coordonnées -->
+            <fieldset class="pane" data-step="3" hidden>
+              <legend class="q">Où vous envoyer le devis ?</legend>
+              <div class="field">
+                <label for="nom">Prénom et nom</label>
+                <input type="text" id="nom" name="nom" autocomplete="name" required>
+              </div>
+              <div class="field">
+                <label for="tel">Téléphone</label>
+                <input type="tel" id="tel" name="tel" placeholder="079 000 00 00" autocomplete="tel" inputmode="tel" required>
+              </div>
+              <div class="field">
+                <label for="email">E-mail <span class="optional">(facultatif, pour recevoir le devis par écrit)</span></label>
+                <input type="email" id="email" name="email" autocomplete="email">
+              </div>
+              <div class="hp" aria-hidden="true">
+                <label for="website">Ne pas remplir</label>
+                <input type="text" id="website" name="website" tabindex="-1" autocomplete="off">
+              </div>
+              <label class="consent">
+                <input type="checkbox" id="consent" name="consent" value="oui" required>
+                <span>J'accepte que mes coordonnées soient transmises à <strong>un seul</strong> professionnel partenaire, uniquement pour établir ce devis. <a href="#confidentialite">Confidentialité</a></span>
+              </label>
+              <div class="form-error" id="formError"></div>
+              <div class="form-nav">
+                <button type="button" class="btn ghost" data-prev>Retour</button>
+                <button type="submit" class="btn" id="submitBtn">Recevoir mon devis</button>
+              </div>
+            </fieldset>
+          </form>
+        </div>
+
+        <div class="success" id="successPane" role="status" aria-live="polite">
+          <div class="check"><svg width="26" height="26"><use href="#pm-check"/></svg></div>
+          <h2>Demande bien reçue</h2>
+          <p class="sub" id="successText">Un professionnel partenaire vous rappelle rapidement.</p>
+          <ol>
+            <li>Gardez votre téléphone à portée : l'appel vient d'un numéro suisse.</li>
+            <li>Préparez 2–3 photos des lieux : elles permettent souvent un devis sans visite.</li>
+            <li>Le devis est gratuit, vous êtes libre de ne pas donner suite.</li>
+          </ol>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="strip">
+    <div class="wrap" id="heroStrip"><span class="strip-label">Nos services</span></div>
+  </div>
 </section>
 
-<section class="sec">
-<div class="wrap stack-lg">
-<div class="stack"><span class="eyebrow">Prestations</span><h2>Quel nettoyage vous faut-il ?</h2></div>
-<div class="svc-grid"><a class="svc-card" href="nettoyage-fin-de-bail/"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 3.5h10v17H7z"/><circle cx="14" cy="12" r=".9"/></svg><strong>Nettoyage de fin de bail</strong><span>Appartement ou maison préparé pour l'état des lieux de sortie.</span><em>En savoir plus <svg class="ico ico-sm" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></em></a><a class="svc-card" href="nettoyage-fin-de-chantier/"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 21V11l8-6 8 6v10"/><path d="M9 21v-6h6v6"/></svg><strong>Nettoyage de fin de chantier</strong><span>Construction neuve ou rénovation, avant la remise des clés.</span><em>En savoir plus <svg class="ico ico-sm" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></em></a><a class="svc-card" href="nettoyage-bureaux/"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="3" width="14" height="18"/><path d="M9 7h.01M12 7h.01M15 7h.01M9 11h.01M12 11h.01M15 11h.01M9 15h.01M12 15h.01M15 15h.01"/></svg><strong>Nettoyage de bureaux &amp; immeubles</strong><span>Bureaux, commerces et cages d'escalier, régulier ou ponctuel.</span><em>En savoir plus <svg class="ico ico-sm" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></em></a></div>
-</div>
+<!-- SERVICES -->
+<section class="block alt" id="services">
+  <div class="wrap">
+    <div class="eyebrow">Prestations</div>
+    <h2>Un seul formulaire, <em>tous vos besoins de nettoyage</em></h2>
+    <p class="sub">Choisissez une prestation : le formulaire s'adapte pour que le devis soit précis dès le premier appel.</p>
+    <div class="service-grid" id="serviceGrid"></div>
+  </div>
 </section>
 
-<section class="sec alt">
-<div class="wrap stack-lg">
-<div class="stack"><span class="eyebrow">Comment ça marche</span><h2>Trois étapes, une seule demande.</h2></div>
-<ol class="steps">
-<li><strong>Votre demande</strong><span>Type de nettoyage, lieu, taille et date : un formulaire court, en trois étapes.</span></li>
-<li><strong>Transmise à un partenaire</strong><span>Votre demande est transmise à une entreprise de nettoyage partenaire qui intervient dans votre région.</span></li>
-<li><strong>Votre devis</strong><span>L'entreprise vous recontacte pour établir un devis gratuit. Vous êtes libre de l'accepter ou non.</span></li>
-</ol>
-</div>
+<!-- POURQUOI UN SEUL PRO -->
+<section class="block" id="pourquoi">
+  <div class="wrap">
+    <div class="eyebrow">Pourquoi un seul pro ?</div>
+    <h2>Un devis, <em>pas quatre appels</em></h2>
+    <p class="sub">Sur les plateformes de comparaison, votre demande part chez plusieurs entreprises en même temps. Nous faisons l'inverse.</p>
+    <div class="compare-grid">
+      <div class="cmp them">
+        <div class="cmp-label">Plateformes à plusieurs devis</div>
+        <div class="cmp-num">3 à 4 appels</div>
+        <ul>
+          <li><svg width="18" height="18" aria-hidden="true"><use href="#pm-x"/></svg>Vos coordonnées sont transmises à 3 ou 4 entreprises.</li>
+          <li><svg width="18" height="18" aria-hidden="true"><use href="#pm-x"/></svg>Plusieurs appels et relances dans les heures qui suivent.</li>
+          <li><svg width="18" height="18" aria-hidden="true"><use href="#pm-x"/></svg>À vous de trier, comparer et refuser les offres.</li>
+        </ul>
+      </div>
+      <div class="cmp us">
+        <div class="cmp-label">Avec <span data-cfg="marque"></span></div>
+        <div class="cmp-num"><span>1</span> seul appel</div>
+        <ul>
+          <li><svg width="18" height="18" aria-hidden="true"><use href="#pm-check"/></svg>Une seule entreprise de votre région reçoit votre demande.</li>
+          <li><svg width="18" height="18" aria-hidden="true"><use href="#pm-check"/></svg>Un interlocuteur unique, du premier appel à l'intervention.</li>
+          <li><svg width="18" height="18" aria-hidden="true"><use href="#pm-check"/></svg>Un devis adapté à votre besoin, sans pression : libre à vous de ne pas donner suite.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
 </section>
 
-<section class="sec">
-<div class="wrap stack-lg">
-<div class="prose">
-<span class="eyebrow">Conseils</span>
-<h2>Une demande complète, un devis plus juste.</h2>
-<p>Pour établir un prix, une entreprise de nettoyage a besoin de savoir ce qui l'attend. Plus votre demande est précise, plus le devis sera juste et rapide, souvent sans visite.</p>
-<ul class="list"><li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12l5 5 9-10"/></svg><span><strong>La taille</strong> — le nombre de pièces pour un logement, la surface en m² pour un chantier ou des bureaux.</span></li><li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12l5 5 9-10"/></svg><span><strong>La date</strong> — celle de l'état des lieux, de la fin des travaux ou du début souhaité.</span></li><li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12l5 5 9-10"/></svg><span><strong>L'état et l'accès</strong> — étage, ascenseur, place de parc, type de sol, taches ou calcaire importants.</span></li><li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12l5 5 9-10"/></svg><span><strong>Les extras</strong> — vitres, stores, balcon, cave ou galetas.</span></li><li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12l5 5 9-10"/></svg><span><strong>Quelques photos</strong> — elles permettent souvent un devis sans déplacement.</span></li></ul>
-<h2>Où ?</h2>
-<p>MatchPro reçoit les demandes de toute la Suisse romande : cantons de <strong>Vaud</strong>, <strong>Genève</strong>, <strong>Fribourg</strong>, <strong>Valais</strong>, <strong>Neuchâtel</strong> et du <strong>Jura</strong>. La couverture dépend des entreprises partenaires disponibles dans votre région : indiquez votre NPA dans le formulaire.</p>
-</div>
-</div>
+<!-- COMMENT ÇA MARCHE -->
+<section class="block alt" id="comment">
+  <div class="wrap">
+    <div class="eyebrow">Comment ça marche</div>
+    <h2>Trois étapes, <em>zéro démarchage</em></h2>
+    <div class="steps-grid">
+      <div class="step"><div class="num">01</div><h3>Décrivez votre besoin</h3><p>Type de nettoyage, lieu, taille et date. Une minute suffit.</p></div>
+      <div class="step"><div class="num">02</div><h3>Un professionnel vous rappelle</h3><p>Une seule entreprise de votre région reçoit votre demande et vous contacte <span data-cfg="delaiReponse"></span>.</p></div>
+      <div class="step"><div class="num">03</div><h3>Vous recevez votre devis</h3><p>Gratuit, sans engagement, et sans être sollicité par plusieurs entreprises.</p></div>
+    </div>
+  </div>
 </section>
 
-<section class="sec alt" id="faq">
-<div class="wrap stack-lg">
-<div class="stack"><span class="eyebrow">Questions fréquentes</span><h2>Avant de faire votre demande.</h2></div>
-<div class="faq"><details><summary>MatchPro est-il une entreprise de nettoyage ?</summary><p>Non. MatchPro est un service de mise en relation : nous transmettons votre demande à une entreprise de nettoyage partenaire, qui établit le devis et réalise l'intervention.</p></details><details><summary>Combien coûte le service ?</summary><p>La demande est gratuite et sans engagement pour vous. Le prix du nettoyage est fixé par l'entreprise partenaire dans son devis.</p></details><details><summary>Qui va me recontacter ?</summary><p>L'entreprise de nettoyage partenaire à qui votre demande est transmise, par téléphone, ou par e-mail si vous l'avez indiqué.</p></details><details><summary>Mes coordonnées sont-elles vendues ?</summary><p>Non. Votre demande est transmise à une entreprise partenaire, uniquement pour établir votre devis. Elle n'est ni vendue ni publiée. Les détails figurent dans la page Protection des données.</p></details><details><summary>Dans quelles régions ?</summary><p>En Suisse romande : Vaud, Genève, Fribourg, Valais, Neuchâtel et Jura. La couverture dépend des entreprises partenaires disponibles près de chez vous.</p></details></div>
-</div>
+<!-- PRIX INDICATIFS (masqué si CONFIG.prix = null) -->
+<section class="block" id="prix">
+  <div class="wrap">
+    <div class="eyebrow">Prix indicatifs</div>
+    <h2>Combien coûte <em>un nettoyage ?</em></h2>
+    <p class="sub">Des fourchettes pour vous situer avant de demander votre devis. Le prix exact dépend de la surface, de l'état des lieux et de l'accès.</p>
+    <div class="price-grid" id="priceGrid"></div>
+    <div class="price-foot">
+      <p class="price-note" id="priceNote"></p>
+      <span class="price-extra" id="priceExtra" hidden></span>
+    </div>
+  </div>
+</section>
+
+<!-- PROFESSIONNELS DU BÂTIMENT (masqué si CONFIG.pro = null) -->
+<section class="pro-band" id="pros">
+  <div class="wrap pro-grid">
+    <div>
+      <div class="eyebrow">Entreprises générales, architectes, régies</div>
+      <h2 id="proTitre"></h2>
+      <p class="sub" id="proTexte"></p>
+      <a class="btn" href="#devis" id="proBtn">Demander un devis professionnel<svg width="18" height="18" aria-hidden="true"><use href="#pm-arrow"/></svg></a>
+    </div>
+    <div class="pro-card"><ul class="pro-list" id="proPoints"></ul></div>
+  </div>
+</section>
+
+<!-- TÉMOIGNAGES (s'affiche uniquement si CONFIG.temoignages contient de vrais avis) -->
+<section class="block alt" id="testiSection" hidden>
+  <div class="wrap">
+    <div class="eyebrow">Ils nous ont fait confiance</div>
+    <h2>Ce qu'en disent <em>nos clients</em></h2>
+    <div class="testi-grid" id="testiGrid"></div>
+  </div>
+</section>
+
+<!-- ZONE -->
+<section class="block" id="zone">
+  <div class="wrap">
+    <div class="eyebrow">Zone d'intervention</div>
+    <h2>Partout en <em>Suisse romande</em></h2>
+    <p class="sub" id="zoneText"></p>
+    <div class="chip-row" id="zoneChips"></div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="block alt" id="faq">
+  <div class="wrap">
+    <div class="eyebrow">Questions fréquentes</div>
+    <h2>Avant de demander <em>votre devis</em></h2>
+    <div class="faq" id="faqList"></div>
+  </div>
+</section>
+
+<!-- CTA FINAL -->
+<section class="final-cta">
+  <div class="wrap">
+    <div>
+      <h2>Votre devis de nettoyage, <em>sans multiplier les appels.</em></h2>
+      <p>Gratuit, sans engagement, un seul professionnel.</p>
+    </div>
+    <a class="btn" href="#devis">Demander mon devis<svg width="18" height="18" aria-hidden="true"><use href="#pm-arrow"/></svg></a>
+  </div>
 </section>
 </main>
 
-<section class="cta-band">
-<div class="wrap cta-row">
-<div><h2>Une demande, un devis gratuit.</h2><p>Décrivez votre besoin en une minute : une entreprise partenaire vous recontacte.</p></div>
-<a class="btn" href="#devis">Demander un devis</a>
-</div>
-</section>
-
-<footer class="site-footer">
-<div class="wrap foot-grid">
-<div class="foot-col"><a class="brand" href="./"><svg class="brand-mark" viewBox="0 0 32 32" aria-hidden="true"><circle cx="12" cy="16" r="8.5"/><circle cx="20" cy="16" r="8.5"/></svg><span class="wordmark">MatchPro</span></a><p>Service de mise en relation pour le nettoyage en Suisse romande : fin de bail, fin de chantier, bureaux et immeubles.</p></div>
-<div class="foot-col"><strong>Nettoyage</strong><a href="nettoyage-fin-de-bail/">Nettoyage de fin de bail</a><a href="nettoyage-fin-de-chantier/">Nettoyage de fin de chantier</a><a href="nettoyage-bureaux/">Nettoyage de bureaux</a></div>
-<div class="foot-col"><strong>MatchPro</strong><a href="#devis">Demander un devis</a><a href="mentions-legales/">Mentions légales</a><a href="mentions-legales/#donnees">Protection des données</a></div>
-</div>
-<div class="wrap foot-bottom"><span>© <span id="year">2026</span> MatchPro</span><span>Vaud · Genève · Fribourg · Valais · Neuchâtel · Jura</span></div>
+<footer>
+  <div class="wrap foot-grid">
+    <div>
+      <div class="logo" aria-hidden="true"><svg viewBox="0 0 48 48"><use href="#mp-icon"/></svg><span class="wordmark">Match<b>Pro</b></span></div>
+      <p data-cfg="tagline"></p>
+      <p id="footOperator"></p>
+      <p class="foot-contact" id="footContact" hidden></p>
+    </div>
+    <div id="confidentialite">
+      <h3>Protection des données (nLPD)</h3>
+      <p id="privacyText"></p>
+      <p style="font-size:.74rem;">© <span id="year"></span> <span data-cfg="marque"></span>. Service de mise en relation avec des entreprises de nettoyage partenaires.</p>
+    </div>
+  </div>
 </footer>
 
-<div class="mobile-bar" id="mobileBar"><a class="btn btn-primary" href="#devis">Demander un devis gratuit</a></div>
+<div class="mobile-bar" id="mobileBar">
+  <a class="btn ghost" id="mobileTel" href="#" hidden>Appeler</a>
+  <a class="btn" href="#devis">Devis gratuit</a>
+</div>
 
-<script src="assets/matchpro.js"></script>
+<script>
+/* ============================================================
+   CONFIGURATION — la seule partie à modifier par client / niche
+   ============================================================ */
+const CONFIG = {
+  clientId: "nettoyage-romandie-01",          // identifiant envoyé avec chaque lead (utile si plusieurs clients)
+  marque: "MatchPro",
+  tagline: "Les meilleurs pros au bon moment",
+  telephone: "",                                // ex. "021 000 00 00" — vide = pas de bouton d'appel
+  horaires: "",                                 // ex. "Lun–ven 8h–18h" — affiché avec le téléphone
+  delaiReponse: "sous 24h",                     // NE PROMETTRE QUE CE QUE LE CLIENT TIENT RÉELLEMENT
+  photoHero: "",                                // URL d'une VRAIE photo (ex. "img/hero.jpg") — vide = fond uni
+  // URL de réception des leads (Formspree, Make, Zapier, n8n…). Vide = mode démo (rien n'est enregistré).
+  endpoint: "",
+
+  // Responsable du traitement (obligatoire en nLPD) — à compléter
+  operateur: {
+    nom: "[Raison sociale ou nom complet — à compléter]",
+    adresse: "[Adresse — à compléter]",
+    email: "[email de contact — à compléter]",
+    conservation: "12 mois"
+  },
+
+  cantons: { VD: "Vaud", GE: "Genève", FR: "Fribourg", VS: "Valais", JU: "Jura" },
+  communes: ["Lausanne", "Morges", "Nyon", "Yverdon-les-Bains", "Vevey", "Genève", "Carouge", "Fribourg", "Bulle", "Sion", "Martigny", "Monthey", "Delémont", "Porrentruy"],
+
+  // Points forts du hero : uniquement des faits vérifiables
+  pointsForts: [
+    "Un seul pro vous rappelle, pas quatre",
+    "Devis gratuit et sans engagement",
+    "Particuliers, régies et professionnels du bâtiment"
+  ],
+
+  // Note moyenne RÉELLE (ex. fiche Google). null = masquée. Ex. { note: "4,9", nombre: 23, source: "Google", url: "https://…" }
+  avis: null,
+
+  // Titre en 2 parties : [texte, fin en italique cuivre]
+  titreParDefaut: ["Les meilleurs pros,", "au bon moment."],
+  ledeParDefaut: "Fin de chantier, fin de bail ou bureaux : décrivez votre besoin : une seule entreprise de nettoyage de votre région vous rappelle avec un devis. Nettoyage des vitres en option.",
+
+  // Prestation complémentaire proposée en case à cocher dans le formulaire (null = aucune)
+  option: {
+    name: "vitres",
+    label: "Ajouter le nettoyage des vitres",
+    detail: "Fenêtres, cadres et stores, dans la même intervention.",
+    carteTitre: "Vitres & fenêtres, en option",
+    carteTexte: "Ajoutez le nettoyage des vitres à n'importe quelle prestation, dans la même intervention."
+  },
+
+  // taille: "pieces" | "surface" | "fenetres" — frequence: true pour les prestations récurrentes
+  // option: true = la case « vitres » est proposée pour ce service
+  // h1: [texte, fin en italique]
+  services: {
+    "chantier":    { label: "Fin de chantier",     desc: "Neuf ou rénovation : poussières, résidus, sols.", taille: "surface",  frequence: false, option: true, dateLabel: "Date de fin des travaux",
+                     h1: ["Nettoyage de fin de chantier,", "prêt pour la remise des clés."], lede: "Neuf ou rénovation en Suisse romande : un professionnel évalue votre chantier et vous transmet un devis clair." },
+    "fin-de-bail": { label: "Fin de bail",         desc: "Appartement ou maison, préparé pour l'état des lieux.", taille: "pieces", frequence: false, option: true, dateLabel: "Date de l'état des lieux",
+                     h1: ["Nettoyage de fin de bail,", "prêt pour l'état des lieux."], lede: "Indiquez la date de votre état des lieux : un professionnel de votre région vous rappelle avec un devis." },
+    "bureaux":     { label: "Bureaux & immeubles", desc: "Bureaux, commerces, cages d'escalier.", taille: "surface", frequence: true, option: true, dateLabel: "Date souhaitée (début)",
+                     h1: ["Nettoyage de bureaux et d'immeubles", "en Suisse romande."], lede: "Contrat régulier ou intervention ponctuelle : décrivez vos locaux, recevez un devis adapté." }
+  },
+
+  // Prix indicatifs par service (null = section masquée).
+  // valide: false tant que les fourchettes n'ont pas été confirmées par le partenaire (rappel dans le bandeau démo).
+  // Valeurs de départ = fourchettes publiques observées sur le marché romand en 2026 — À VALIDER AVANT MISE EN LIGNE.
+  prix: {
+    valide: false,
+    note: "Fourchettes indicatives observées en Suisse romande. Le montant exact est fixé dans le devis, après échange avec le professionnel.",
+    services: {
+      "chantier":    [["Tarif horaire", "CHF 50 – 90 / h"], ["Au m²", "CHF 12 – 20 / m²"], ["Appartement 1–2 pièces", "CHF 400 – 720"], ["Appartement 3–4 pièces", "CHF 700 – 1'800"], ["Maison 120–180 m²", "CHF 1'450 – 3'500"]],
+      "fin-de-bail": [["Studio", "CHF 250 – 300"], ["2 pièces", "CHF 450 – 550"], ["3 pièces", "CHF 500 – 750"], ["4 pièces", "CHF 650 – 880"], ["5 pièces", "CHF 750 – 1'200"]],
+      "bureaux":     [["Bureaux et commerces", "CHF 35 – 75 / h"], ["Immeubles, conciergerie", "CHF 35 – 65 / h"]]
+    },
+    option: "Vitres en option : CHF 40 – 70 / h"
+  },
+
+  // Bloc « professionnels du bâtiment » (null = masqué)
+  pro: {
+    titre: ["Vos fins de chantier,", "un seul interlocuteur."],
+    texte: "Neuf, rénovation, immeubles ou locaux commerciaux : décrivez le chantier et sa date de fin des travaux, un professionnel de votre région vous rappelle avec un devis.",
+    points: [
+      ["Un seul interlocuteur", "pas de mise en concurrence imposée, pas de relances multiples."],
+      ["Adapté au chantier", "surface, accès, date de réception des travaux : le devis part de vos informations."],
+      ["Ponctuel ou récurrent", "pour une réception d'ouvrage ou pour tous vos chantiers de l'année."]
+    ]
+  },
+
+  // UNIQUEMENT de vrais avis, vérifiables (prénom + initiale, lieu, prestation). Vide = section masquée.
+  temoignages: [
+    // { texte: "…", auteur: "Marie D.", lieu: "Lausanne", service: "Fin de bail" }
+  ],
+
+  faq: [
+    ["Le devis est-il vraiment gratuit ?", "Oui. La demande et le devis sont gratuits et sans engagement : vous êtes libre de ne pas donner suite."],
+    ["Qui va me contacter ?", "Une seule entreprise de nettoyage partenaire, active dans votre région. Vos coordonnées ne sont transmises à personne d'autre."],
+    ["Pourquoi un seul professionnel et pas plusieurs devis ?", "Parce que comparer quatre devis veut souvent dire recevoir quatre appels. Votre demande est transmise à une seule entreprise de votre région : un interlocuteur, un devis, et vous restez libre de ne pas donner suite."],
+    ["Combien coûte un nettoyage ?", "Consultez nos prix indicatifs ci-dessus. Le montant exact dépend de la surface, de l'état des lieux et des options : c'est pourquoi le formulaire vous demande quelques détails, pour un devis juste dès le premier appel."],
+    ["Combien de temps à l'avance faut-il réserver ?", "Idéalement une à deux semaines avant la date souhaitée, et davantage en fin de mois, période chargée pour les fins de bail. En cas d'urgence, indiquez-le dans les précisions du formulaire."],
+    ["Quelle différence entre fin de chantier et fin de bail ?", "Le nettoyage de fin de chantier retire les poussières fines et les résidus de plâtre, de peinture, de colle et de protections après des travaux. Le nettoyage de fin de bail prépare un logement déjà habité pour l'état des lieux de sortie avec la régie."],
+    ["Faut-il une visite sur place ?", "Pas toujours. Pour les petites surfaces, quelques photos suffisent souvent. Pour un chantier ou de grands locaux, le professionnel peut proposer une courte visite."],
+    ["Pouvez-vous aussi nettoyer les vitres ?", "Oui, en option. Cochez « Ajouter le nettoyage des vitres » dans le formulaire : fenêtres, cadres et stores sont alors inclus dans le devis de la même intervention."],
+    ["Et mes données personnelles ?", "Elles servent uniquement à établir votre devis, ne sont ni vendues ni partagées avec d'autres entreprises, et vous pouvez demander leur suppression à tout moment."]
+  ]
+};
+
+/* ============================================================
+   MOTEUR — pas besoin de modifier en dessous
+   ============================================================ */
+const $ = (s, r = document) => r.querySelector(s);
+const $$ = (s, r = document) => [...r.querySelectorAll(s)];
+const params = new URLSearchParams(location.search);
+const reduceMotion = matchMedia("(prefers-reduced-motion: reduce)").matches;
+const scrollTo = (el, block = "nearest") => el.scrollIntoView({ behavior: reduceMotion ? "auto" : "smooth", block });
+let current = 1;
+
+const ICONS = {
+  "chantier": '<path d="M4 21V11l8-6 8 6v10"/><line x1="18" y1="5" x2="21.5" y2="8.5"/>',
+  "fin-de-bail": '<rect x="7" y="3.5" width="10" height="17" rx="0.5"/><circle cx="14" cy="12" r="0.9" fill="currentColor" stroke="none"/>',
+  "logements": '<path d="M4 21V11l8-6 8 6v10"/><path d="M9 21v-6h6v6"/>',
+  "bureaux": '<rect x="5" y="3" width="14" height="18"/><path d="M9 7h.01M12 7h.01M15 7h.01M9 11h.01M12 11h.01M15 11h.01M9 15h.01M12 15h.01M15 15h.01"/>',
+  "exterieur": '<circle cx="12" cy="9" r="3.5"/><path d="M12 2.5V4M12 14v1.5M5 9h1.5M17.5 9H19M3 21h18"/>',
+  "fenetres": '<rect x="4" y="4" width="16" height="16"/><path d="M12 4v16M4 12h16"/>'
+};
+const icon = (k, cls = "") => `<svg class="${cls}" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${ICONS[k] || ICONS.logements}</svg>`;
+const TAILLE = {
+  pieces:   { label: "Taille du logement", type: "select", options: ["1 – 1.5 pièce", "2 – 2.5 pièces", "3 – 3.5 pièces", "4 – 4.5 pièces", "5 pièces et plus"] },
+  surface:  { label: "Surface approximative (m²)", type: "number", placeholder: "ex. 120" },
+  fenetres: { label: "Nombre de fenêtres (approx.)", type: "select", options: ["1 à 5", "6 à 15", "16 à 30", "Plus de 30"] }
+};
+const esc = s => String(s).replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+const checkSvg = '<svg width="18" height="18" aria-hidden="true"><use href="#pm-check"/></svg>';
+
+/* ---------- Rendu du contenu ---------- */
+$$("[data-cfg]").forEach(el => { el.textContent = CONFIG[el.dataset.cfg]; });
+$("#year").textContent = new Date().getFullYear();
+{
+  const msgs = [];
+  if (!CONFIG.endpoint) msgs.push("formulaire non connecté : les demandes ne sont enregistrées nulle part (renseigner CONFIG.endpoint)");
+  if (CONFIG.prix && !CONFIG.prix.valide) msgs.push("prix indicatifs à valider avec le partenaire (CONFIG.prix.valide)");
+  if (msgs.length) { $("#demoBanner").textContent = "Mode démo — " + msgs.join(" · ") + "."; $("#demoBanner").classList.add("show"); }
+}
+if (CONFIG.photoHero) { const hero = $(".hero"); hero.classList.add("has-photo"); hero.style.setProperty("--hero-img", `url("${CONFIG.photoHero}")`); }
+
+if (CONFIG.telephone) {
+  const href = "tel:" + CONFIG.telephone.replace(/\s/g, "").replace(/^0/, "+41");
+  [$("#headerTel"), $("#mobileTel")].forEach(a => { a.href = href; a.hidden = false; });
+  $("#headerTel").textContent = CONFIG.telephone;
+  $("#footContact").innerHTML = `Service client : <a href="${href}">${esc(CONFIG.telephone)}</a>${CONFIG.horaires ? " · " + esc(CONFIG.horaires) : ""}`;
+  $("#footContact").hidden = false;
+}
+if (CONFIG.avis) {
+  const a = CONFIG.avis, label = `<span class="stars" aria-hidden="true">★★★★★</span><span><strong>${esc(a.note)}/5</strong> · ${esc(a.nombre)} avis ${esc(a.source)}</span>`;
+  $("#heroRating").innerHTML = a.url ? `<a href="${esc(a.url)}" target="_blank" rel="noopener" style="display:inline-flex;gap:8px;align-items:center">${label}</a>` : label;
+  $("#heroRating").hidden = false;
+}
+
+const cantonCodes = Object.keys(CONFIG.cantons);
+$("#heroEyebrow").innerHTML = `<span class="full">Suisse romande · </span>${cantonCodes.map(esc).join(" · ")}`;
+$("#heroPoints").innerHTML = CONFIG.pointsForts.map(p => `<li>${checkSvg}${esc(p)}</li>`).join("");
+$("#canton").insertAdjacentHTML("beforeend", cantonCodes.map(c => `<option value="${c}">${esc(CONFIG.cantons[c])}</option>`).join(""));
+$("#zoneText").textContent = "Nos professionnels partenaires interviennent dans les cantons de " + Object.values(CONFIG.cantons).join(", ").replace(/, ([^,]*)$/, " et $1") + ".";
+$("#zoneChips").innerHTML = CONFIG.communes.map(c => `<span class="chip">${esc(c)}</span>`).join("");
+$("#faqList").innerHTML = CONFIG.faq.map(([q, a]) => `<details><summary>${esc(q)}</summary><p>${esc(a)}</p></details>`).join("");
+$("#vizDelai").textContent = "Rappel " + CONFIG.delaiReponse;
+$("#miniText").textContent = "Il vous rappelle " + CONFIG.delaiReponse + " avec un devis.";
+
+const svcKeys = Object.keys(CONFIG.services);
+$("#service").innerHTML = svcKeys.map(k => `<option value="${k}">${esc(CONFIG.services[k].label)}</option>`).join("");
+$("#heroStrip").insertAdjacentHTML("beforeend",
+  svcKeys.map(k => `<a class="chip" href="#devis" data-pick="${k}">${icon(k)}${esc(CONFIG.services[k].label)}</a>`).join("") +
+  (CONFIG.option ? `<a class="chip" href="#services">${icon("fenetres")}${esc(CONFIG.option.carteTitre)}</a>` : ""));
+$("#serviceGrid").innerHTML = svcKeys.map(k => {
+  const s = CONFIG.services[k];
+  return `<a class="service-card" href="#devis" data-pick="${k}">${icon(k, "ico-box")}<strong>${esc(s.label)}</strong><span>${esc(s.desc)}</span><span class="go">Demander un devis →</span></a>`;
+}).join("");
+if (CONFIG.option) {
+  $("#serviceGrid").insertAdjacentHTML("afterend",
+    `<div class="option-strip">${icon("fenetres", "ico-box")}<div><strong>${esc(CONFIG.option.carteTitre)}</strong><span>${esc(CONFIG.option.carteTexte)}</span></div></div>`);
+}
+
+if (CONFIG.prix) {
+  $("#priceGrid").innerHTML = svcKeys.filter(k => CONFIG.prix.services[k]).map(k =>
+    `<div class="price-card" data-price="${k}"><div class="price-head">${icon(k, "ico-box")}<h3>${esc(CONFIG.services[k].label)}</h3></div>` +
+    `<dl>${CONFIG.prix.services[k].map(([l, v]) => `<div class="price-row"><dt>${esc(l)}</dt><dd>${esc(v)}</dd></div>`).join("")}</dl>` +
+    `<a class="go" href="#devis" data-pick="${k}">Obtenir mon prix exact →</a></div>`).join("");
+  $("#priceNote").textContent = CONFIG.prix.note;
+  if (CONFIG.prix.option) { $("#priceExtra").innerHTML = icon("fenetres") + esc(CONFIG.prix.option); $("#priceExtra").hidden = false; }
+} else {
+  $("#prix").hidden = true;
+  $$('a[href="#prix"]').forEach(a => a.hidden = true);
+}
+
+if (CONFIG.pro) {
+  $("#proTitre").innerHTML = `${esc(CONFIG.pro.titre[0])} <em>${esc(CONFIG.pro.titre[1] || "")}</em>`;
+  $("#proTexte").textContent = CONFIG.pro.texte;
+  $("#proPoints").innerHTML = CONFIG.pro.points.map(([t, d]) => `<li>${checkSvg}<span><strong>${esc(t)}</strong> — ${esc(d)}</span></li>`).join("");
+} else {
+  $("#pros").hidden = true;
+  $$('a[href="#pros"]').forEach(a => a.hidden = true);
+}
+
+if (CONFIG.temoignages.length) {
+  $("#testiSection").hidden = false;
+  $("#testiGrid").innerHTML = CONFIG.temoignages.map(t =>
+    `<blockquote class="testi"><p>« ${esc(t.texte)} »</p><cite>${esc(t.auteur)} · ${esc(t.service)} à ${esc(t.lieu)}</cite></blockquote>`).join("");
+}
+
+const op = CONFIG.operateur;
+$("#footOperator").innerHTML = `${esc(op.nom)}<br>${esc(op.adresse)}<br>${esc(op.email)}`;
+$("#privacyText").textContent = `Responsable du traitement : ${op.nom}. Les données saisies (nom, téléphone, e-mail facultatif, lieu et description du besoin) sont utilisées uniquement pour vous mettre en relation avec une seule entreprise de nettoyage partenaire en vue d'un devis. Elles ne sont ni vendues ni transmises à d'autres tiers, et sont conservées ${op.conservation} au maximum. Vous pouvez demander l'accès, la rectification ou la suppression de vos données à ${op.email}.`;
+
+/* ---------- Titre, illustration et récapitulatif ---------- */
+const heroEl = $(".hero"), card = $("#formCard");
+function setTitle(parts) {
+  $("#h1Main").textContent = parts[0];
+  $("#h1Accent").textContent = parts[1] || "";
+}
+function updateViz() {
+  const s = CONFIG.services[$("#service").value];
+  const lieu = $("#localite").value.trim();
+  $("#vizService").textContent = s ? s.label : "Nettoyage";
+  $("#vizLieu").textContent = lieu || "Suisse romande";
+  $("#recapText").textContent = (s ? s.label : "") + (lieu ? " · " + lieu : "");
+}
+
+/* ---------- Message match : ?service=... ---------- */
+function applyService(key) {
+  const s = CONFIG.services[key];
+  if (!s) return false;
+  $("#service").value = key;
+  setTitle(s.h1);
+  $("#heroLede").textContent = s.lede;
+  $$(".price-card").forEach(c => c.classList.toggle("is-active", c.dataset.price === key));
+  if (current >= 2) renderDetails(key);
+  updateViz();
+  return true;
+}
+setTitle(CONFIG.titreParDefaut);
+$("#heroLede").textContent = CONFIG.ledeParDefaut;
+applyService(params.get("service"));
+updateViz();
+
+/* ---------- Champs de qualification dynamiques ---------- */
+let renderedFor = null;
+function renderDetails(key) {
+  if (renderedFor === key) return;
+  renderedFor = key;
+  const s = CONFIG.services[key], t = TAILLE[s.taille];
+  let h = `<div class="field"><label for="taille">${t.label}</label>`;
+  h += t.type === "select"
+    ? `<select id="taille" name="taille" required><option value="" disabled selected>Choisir…</option>${t.options.map(o => `<option>${o}</option>`).join("")}</select>`
+    : `<input type="number" id="taille" name="taille" min="1" max="100000" inputmode="numeric" placeholder="${t.placeholder}" required>`;
+  h += `</div><div class="row-2">`;
+  if (s.frequence) {
+    h += `<div class="field"><label for="frequence">Fréquence</label><select id="frequence" name="frequence" required>
+      <option value="" disabled selected>Choisir…</option><option value="ponctuel">Une seule fois</option>
+      <option value="hebdomadaire">Chaque semaine</option><option value="bimensuel">Toutes les 2 semaines</option><option value="mensuel">Chaque mois</option></select></div>`;
+  }
+  h += `<div class="field" ${s.frequence ? "" : 'style="grid-column:1/-1"'}><label for="date">${s.dateLabel}</label><input type="date" id="date" name="date" required></div></div>`;
+  const o = CONFIG.option;
+  if (o && s.option) {
+    h += `<label class="addon"><input type="checkbox" id="${o.name}" name="${o.name}" value="oui"><span><strong>${esc(o.label)}</strong><small>${esc(o.detail)}</small></span></label>`;
+  }
+  $("#detailFields").innerHTML = h;
+  $("#date").min = new Date().toISOString().slice(0, 10);
+}
+
+/* ---------- Navigation entre étapes ---------- */
+const NAMES = ["Votre besoin", "Détails", "Coordonnées"];
+function goTo(n) {
+  current = n;
+  heroEl.classList.toggle("is-open", n > 1);
+  $$("fieldset.pane").forEach(f => { f.hidden = Number(f.dataset.step) !== n; });
+  $("#stepLabel").textContent = `Étape ${n} sur 3`;
+  $("#stepName").textContent = NAMES[n - 1];
+  $("#progressFill").style.width = (n / 3 * 100) + "%";
+  track("form_step", { step: n });
+}
+function validPane(n) {
+  const pane = $(`[data-step="${n}"]`);
+  const loc = $("#localite");
+  loc.setCustomValidity(n === 1 && !/^\s*\d{4}\b/.test(loc.value) && loc.value ? "Indiquez le NPA à 4 chiffres, ex. 1110 Morges" : "");
+  const tel = $("#tel");
+  if (n === 3) {
+    const t = tel.value.replace(/[\s.\-()/]/g, "");
+    tel.setCustomValidity(t && !/^(\+41|0041|0)[1-9]\d{8}$/.test(t) ? "Numéro suisse attendu, ex. 079 123 45 67" : "");
+  }
+  for (const el of $$("input, select, textarea", pane)) {
+    if (!el.checkValidity()) { el.reportValidity(); return false; }
+  }
+  return true;
+}
+function next() {
+  if (!validPane(current)) return;
+  if (current === 1) renderDetails($("#service").value);
+  goTo(current + 1);
+  updateViz();
+  scrollTo(card);
+  $("#formTitle").focus({ preventScroll: true });
+}
+$$("[data-next]").forEach(b => b.addEventListener("click", next));
+$$("[data-prev]").forEach(b => b.addEventListener("click", () => {
+  goTo(current - 1);
+  if (current === 1) { scrollTo($("#devis"), "center"); $("#localite").focus({ preventScroll: true }); }
+  else $("#formTitle").focus({ preventScroll: true });
+}));
+$$("[data-edit]").forEach(b => b.addEventListener("click", () => {
+  goTo(1);
+  scrollTo($("#devis"), "center");
+  $("#localite").focus({ preventScroll: true });
+}));
+$("#service").addEventListener("change", e => applyService(e.target.value));
+$("#localite").addEventListener("input", updateViz);
+$$("[data-pick]").forEach(a => a.addEventListener("click", e => {
+  e.preventDefault();
+  applyService(a.dataset.pick);
+  if (current === 1) {
+    scrollTo($("#devis"), "center");
+    setTimeout(() => $("#localite").focus({ preventScroll: true }), reduceMotion ? 0 : 400);
+  } else {
+    scrollTo(card, "start");
+  }
+}));
+
+$("#proBtn").addEventListener("click", e => {
+  e.preventDefault();
+  if (CONFIG.services.chantier) applyService("chantier");
+  const pro = $("#p4"); if (pro) pro.checked = true;   // profil « Architecte / entrepreneur » pré-coché
+  if (current === 1) {
+    scrollTo($("#devis"), "center");
+    setTimeout(() => $("#localite").focus({ preventScroll: true }), reduceMotion ? 0 : 400);
+  } else {
+    scrollTo(card, "start");
+  }
+});
+
+/* ---------- Scoring du lead (envoyé, jamais affiché) ---------- */
+function scoreLead(d) {
+  let s = 0;
+  if (d.date) {
+    const days = (new Date(d.date) - new Date()) / 864e5;
+    s += days <= 7 ? 35 : days <= 30 ? 25 : days <= 90 ? 10 : 0;
+  }
+  if (["regie", "entreprise", "pro-batiment"].includes(d.profil)) s += 20;   // potentiel de volume / récurrence
+  if (d.frequence && d.frequence !== "ponctuel") s += 20;                      // contrat récurrent
+  if (d.email) s += 10;
+  if ((d.commentaire || "").trim().length > 15) s += 10;                      // prospect engagé
+  if (d.taille) s += 5;
+  if (CONFIG.option && d[CONFIG.option.name]) s += 5;                        // prestation en option = panier plus élevé
+  return { score: s, niveau: s >= 55 ? "chaud" : s >= 30 ? "tiede" : "froid" };
+}
+
+/* ---------- Suivi (Google Tag Manager / Ads) ---------- */
+function track(event, data) { (window.dataLayer = window.dataLayer || []).push({ event, ...data }); }
+
+/* ---------- Envoi ---------- */
+$("#leadForm").addEventListener("submit", async e => {
+  e.preventDefault();
+  if (current < 3) { next(); return; }   // touche Entrée avant la dernière étape = « Continuer »
+  if (!validPane(3)) return;
+  const d = Object.fromEntries(new FormData(e.target).entries());
+  if (d.website) return; // pot de miel anti-robots
+  delete d.website;
+  const svc = CONFIG.services[d.service];
+  const payload = {
+    ...d,
+    service_label: svc.label,
+    ...(CONFIG.option ? { [CONFIG.option.name]: d[CONFIG.option.name] ? "oui" : "non" } : {}),
+    canton_label: CONFIG.cantons[d.canton],
+    ...scoreLead(d),
+    client_id: CONFIG.clientId,
+    page: location.origin + location.pathname,
+    utm_source: params.get("utm_source") || "", utm_medium: params.get("utm_medium") || "",
+    utm_campaign: params.get("utm_campaign") || "", utm_term: params.get("utm_term") || "",
+    gclid: params.get("gclid") || "", referrer: document.referrer || "",
+    envoye_le: new Date().toISOString()
+  };
+
+  const btn = $("#submitBtn"), err = $("#formError");
+  btn.disabled = true; btn.textContent = "Envoi…"; err.classList.remove("show");
+  try {
+    if (CONFIG.endpoint) {
+      const r = await fetch(CONFIG.endpoint, { method: "POST", headers: { "Content-Type": "application/json", "Accept": "application/json" }, body: JSON.stringify(payload) });
+      if (!r.ok) throw new Error("HTTP " + r.status);
+    } else {
+      console.warn("[MODE DÉMO] Lead non envoyé :", payload);
+    }
+    track("lead_submit", { service: d.service, canton: d.canton, lead_score: payload.score, lead_niveau: payload.niveau });
+    $("#formPane").hidden = true;
+    $("#successText").textContent = `Merci ${d.nom.split(" ")[0]}. Un professionnel partenaire vous rappelle ${CONFIG.delaiReponse} au ${d.tel}.`;
+    $("#successPane").classList.add("show");
+    scrollTo(card, "start");
+  } catch (x) {
+    err.textContent = "L'envoi a échoué. Réessayez dans un instant" + (CONFIG.telephone ? ` ou appelez le ${CONFIG.telephone}.` : ".");
+    err.classList.add("show");
+    btn.disabled = false; btn.textContent = "Recevoir mon devis";
+  }
+});
+
+/* ---------- Barre mobile : masquée quand le formulaire est visible ---------- */
+const visibleForms = new Set();
+const io = new IntersectionObserver(entries => {
+  entries.forEach(en => en.isIntersecting ? visibleForms.add(en.target) : visibleForms.delete(en.target));
+  $("#mobileBar").classList.toggle("hide", visibleForms.size > 0);
+}, { threshold: 0.15 });
+io.observe($("#devis"));
+io.observe(card);
+
+goTo(1);
+</script>
 </body>
 </html>

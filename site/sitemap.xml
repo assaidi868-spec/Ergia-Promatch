@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!-- Domaine provisoire : si le domaine change, remplacer https://matchpro.ch partout dans le dossier site/ -->
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://matchpro.ch/</loc><lastmod>2026-09-25</lastmod></url>
-  <url><loc>https://matchpro.ch/nettoyage-fin-de-bail/</loc><lastmod>2026-09-25</lastmod></url>
-  <url><loc>https://matchpro.ch/nettoyage-fin-de-chantier/</loc><lastmod>2026-09-25</lastmod></url>
-  <url><loc>https://matchpro.ch/nettoyage-bureaux/</loc><lastmod>2026-09-25</lastmod></url>
-  <url><loc>https://matchpro.ch/mentions-legales/</loc><lastmod>2026-09-25</lastmod></url>
-</urlset>
