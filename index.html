@@ -5,6 +5,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>ERGIA — Entreprise de nettoyage en Suisse romande</title>
 <meta name="description" content="ERGIA, entreprise de nettoyage en Suisse romande : fin de chantier, fin de bail, bureaux et immeubles. Vitres en option. Devis gratuit et sans engagement.">
+<meta name="theme-color" content="#182252">
+<meta name="format-detection" content="telephone=no">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 40'%3E%3Cpath d='M22 3Q22 12 31 12Q22 12 22 21Q22 12 13 12Q22 12 22 3Z' fill='%23C29A4E'/%3E%3Cpath d='M5 26Q30 42 57 22' stroke='%233F7FC1' stroke-width='3.2' fill='none' stroke-linecap='round'/%3E%3Cpath d='M34 29Q45 13 61 15Q55 31 34 29Z' fill='%234E9A3A'/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Marcellus&amp;family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&amp;display=swap" rel="stylesheet">
@@ -19,7 +22,7 @@
   }
   * { box-sizing: border-box; }
   [hidden] { display: none !important; }
-  html { scroll-behavior: smooth; scroll-padding-top: 90px; -webkit-text-size-adjust: 100%; }
+  html { scroll-behavior: smooth; scroll-padding-top: 90px; -webkit-text-size-adjust: 100%; -webkit-tap-highlight-color: transparent; }
   body { margin: 0; background: var(--bg); color: var(--ink); font-family: 'DM Sans', system-ui, sans-serif; font-size: 16px; line-height: 1.6; -webkit-font-smoothing: antialiased; }
   h1, h2, h3, p, figure, ul, ol { margin: 0; }
   ul, ol { padding: 0; list-style: none; }
@@ -87,7 +90,7 @@
   @media (max-width: 980px) {
     .main-nav, .header-cta { display: none; }
     .menu-btn { display: inline-flex; }
-    .mobile-menu.open { display: flex; flex-direction: column; gap: 2px; padding: 8px var(--gutter) 20px; border-top: 1px solid var(--line); max-height: calc(100vh - 120px); overflow-y: auto; }
+    .mobile-menu.open { display: flex; flex-direction: column; gap: 2px; padding: 8px var(--gutter) 20px; border-top: 1px solid var(--line); max-height: calc(100vh - 120px); max-height: calc(100dvh - 120px); overflow-y: auto; overscroll-behavior: contain; }
     .mobile-menu a { padding: 12px 4px; text-decoration: none; color: var(--ink); font-weight: 500; border-bottom: 1px solid var(--line); }
     .mobile-menu a.sub { padding-left: 18px; font-weight: 400; color: var(--ink-soft); }
     .mobile-menu .mm-label { padding: 12px 4px 4px; font-size: .78rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: var(--fresh-text); }
@@ -229,7 +232,7 @@
 
   /* Contact + formulaire */
   .contact-grid { display: grid; grid-template-columns: .85fr 1.15fr; gap: clamp(24px, 4vw, 40px); align-items: start; }
-  @media (max-width: 900px) { .contact-grid { grid-template-columns: 1fr; } .form-card { order: -1; } }
+  @media (max-width: 900px) { .contact-grid { grid-template-columns: minmax(0, 1fr); } .form-card { order: -1; } }
   .contact-card { display: flex; flex-direction: column; gap: 18px; }
   .who { display: flex; gap: 14px; align-items: center; }
   .who-photo { width: 64px; height: 64px; border-radius: 50%; background: var(--brand-soft); display: flex; align-items: center; justify-content: center; font-family: 'Marcellus', Georgia, serif; font-size: 1.8rem; color: var(--brand); flex-shrink: 0; }
@@ -239,6 +242,7 @@
   .c-line .ico { width: 40px; height: 40px; padding: 10px; border-radius: 12px; background: var(--brand-soft); color: var(--brand); }
   .c-line span { display: block; font-size: .8rem; color: var(--ink-soft); }
   .c-line strong { font-size: .98rem; word-break: break-word; }
+  .c-line a { color: var(--ink); text-decoration: none; }
   .chips { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 12px; }
   .chip { background: var(--brand-soft); color: var(--brand); font-size: .82rem; font-weight: 600; padding: 7px 12px; border-radius: 99px; }
 
@@ -257,6 +261,8 @@
   @media (max-width: 460px) { .row-2 { grid-template-columns: 1fr; } }
   input, select, textarea { font: inherit; font-size: 16px; padding: 12px 13px; border: 1px solid var(--line); border-radius: 10px; background: var(--bg); color: var(--ink); width: 100%; min-height: 48px; }
   textarea { min-height: 84px; resize: vertical; }
+  input[type="date"] { -webkit-appearance: none; appearance: none; display: block; }
+  input::-webkit-date-and-time-value { text-align: left; }
   input:focus, select:focus, textarea:focus { outline: none; border-color: var(--brand); background: var(--surface); box-shadow: 0 0 0 4px color-mix(in srgb, var(--brand) 16%, transparent); }
   .tiles { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; }
   .tile { position: relative; }
@@ -272,6 +278,7 @@
   .addon small { display: block; font-size: .8rem; color: var(--ink-soft); }
   .nav-btns { display: flex; gap: 10px; margin-top: 4px; }
   .nav-btns .btn-primary { flex: 1; }
+  @media (max-width: 420px) { .nav-btns .btn { padding-inline: 16px; white-space: normal; text-align: center; } }
   .consent { display: flex; gap: 10px; align-items: flex-start; font-size: .8rem; color: var(--ink-soft); line-height: 1.5; }
   .consent input { width: 20px; height: 20px; min-height: 0; flex-shrink: 0; padding: 0; margin-top: 1px; accent-color: var(--brand); }
   .hp { position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden; }
@@ -331,6 +338,12 @@
   .i-warm-line { fill: none; stroke: #B07F3C; stroke-width: 2; }
   .i-cushion { fill: var(--surface); opacity: .22; }
   .i-spark { fill: var(--gold); }
+  /* Écrans tactiles : pas d'effet de survol qui reste « collé » après un toucher */
+  @media (hover: none) {
+    .btn-primary:hover { transform: none; }
+    .svc-card:hover { transform: none; box-shadow: none; border-color: var(--line); }
+    .svc-card:hover .illus { transform: none; }
+  }
   @media (prefers-reduced-motion: reduce) { * { transition: none !important; animation: none !important; scroll-behavior: auto !important; } }
 
 </style>
@@ -342,7 +355,7 @@
 <div class="topbar">
 <div class="wrap topbar-row">
 <span>Entreprise de nettoyage · Suisse romande</span>
-<span class="topbar-links"><a href="#contact"><svg class="ico ico-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg>[078 … — à compléter]</a><a href="#contact"><svg class="ico ico-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>[contact@… — à compléter]</a></span>
+<span class="topbar-links"><a class="js-tel" href="#contact"><svg class="ico ico-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg>[078 … — à compléter]</a><a class="js-mail" href="#contact"><svg class="ico ico-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>[contact@… — à compléter]</a></span>
 </div>
 </div>
 
@@ -359,7 +372,7 @@
 <a href="#formules" data-nav="formules">Formules</a>
 <a href="#contact" data-nav="contact">Contact</a>
 </nav>
-<a class="btn btn-primary header-cta" href="#contact">Demander un devis</a>
+<a class="btn btn-primary header-cta" href="#devis">Demander un devis</a>
 <button type="button" class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="mobileMenu" aria-label="Ouvrir le menu"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
 </div>
 <nav class="mobile-menu" id="mobileMenu" aria-label="Menu mobile">
@@ -369,7 +382,7 @@
 <a class="sub" href="#fin-de-chantier">Fin de chantier</a><a class="sub" href="#fin-de-bail">Fin de bail</a><a class="sub" href="#bureaux">Bureaux &amp; immeubles</a>
 <a href="#formules">Formules</a>
 <a href="#contact">Contact</a>
-<a class="btn btn-primary" href="#contact">Demander un devis</a>
+<a class="btn btn-primary" href="#devis">Demander un devis</a>
 </nav>
 </header>
 
@@ -382,7 +395,7 @@
 <span class="eyebrow">Entreprise de nettoyage · Suisse romande</span>
 <h1>Des lieux impeccables, un interlocuteur qui s'engage.</h1>
 <p class="lead">ERGIA nettoie vos chantiers, fins de bail et bureaux. Un devis clair, un contact direct avec le fondateur, et un travail contrôlé avant la remise des lieux.</p>
-<div class="actions"><a class="btn btn-primary" href="#contact">Demander un devis</a><a class="btn btn-outline" href="#prestations">Nos prestations</a></div>
+<div class="actions"><a class="btn btn-primary" href="#devis">Demander un devis</a><a class="btn btn-outline" href="#prestations">Nos prestations</a></div>
 <ul class="ticks"><li><svg class="ico ico-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5 9-10"/></svg>Devis gratuit</li><li><svg class="ico ico-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5 9-10"/></svg>Sans engagement</li><li><svg class="ico ico-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5 9-10"/></svg>Particuliers, régies, entreprises</li></ul>
 </div>
 <div class="hero-visual">
@@ -480,7 +493,7 @@
 <h3>Votre devis fin de chantier</h3>
 <p class="muted">Gratuit et sans engagement. Une minute suffit.</p>
 <a class="btn btn-primary" href="#devis-chantier">Demander mon devis</a>
-<p class="muted small">Ou appelez directement : <a class="tel-link" href="#contact">[078 … — à compléter]</a></p>
+<p class="muted small">Ou appelez directement : <a class="js-tel" href="#contact">[078 … — à compléter]</a></p>
 </div>
 <div class="card side-card">
 <h3>Autres prestations</h3>
@@ -519,7 +532,7 @@
 <h3>Votre devis fin de bail</h3>
 <p class="muted">Gratuit et sans engagement. Une minute suffit.</p>
 <a class="btn btn-primary" href="#devis-fin-de-bail">Demander mon devis</a>
-<p class="muted small">Ou appelez directement : <a class="tel-link" href="#contact">[078 … — à compléter]</a></p>
+<p class="muted small">Ou appelez directement : <a class="js-tel" href="#contact">[078 … — à compléter]</a></p>
 </div>
 <div class="card side-card">
 <h3>Autres prestations</h3>
@@ -558,7 +571,7 @@
 <h3>Votre devis bureaux &amp; immeubles</h3>
 <p class="muted">Gratuit et sans engagement. Une minute suffit.</p>
 <a class="btn btn-primary" href="#devis-bureaux">Demander mon devis</a>
-<p class="muted small">Ou appelez directement : <a class="tel-link" href="#contact">[078 … — à compléter]</a></p>
+<p class="muted small">Ou appelez directement : <a class="js-tel" href="#contact">[078 … — à compléter]</a></p>
 </div>
 <div class="card side-card">
 <h3>Autres prestations</h3>
@@ -579,7 +592,7 @@
 <p class="lead">Chaque lieu est différent : nous établissons un devis précis selon la surface, la fréquence et les prestations demandées.</p>
 </div>
 </div>
-<div class="sec"><div class="wrap"><div class="f-grid"><div class="f-card"><h3>Ponctuel</h3><p><strong>Idéal pour :</strong> fin de bail, fin de chantier, grand nettoyage.</p><ul><li><svg class="ico ico-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5 9-10"/></svg>Une intervention complète, à la date choisie</li><li><svg class="ico ico-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5 9-10"/></svg>Produits et matériel fournis [à confirmer]</li><li><svg class="ico ico-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5 9-10"/></svg>Contrôle avant la remise des lieux</li></ul><p class="price">Prix : sur devis · [ou « à partir de CHF … » si Etienne le souhaite]</p><a class="btn btn-primary" href="#contact">Demander un devis</a></div><div class="f-card featured"><span class="tag">Le plus demandé [à confirmer]</span><h3>Entretien régulier</h3><p><strong>Idéal pour :</strong> bureaux et immeubles, chaque semaine, toutes les deux semaines ou chaque mois.</p><ul><li><svg class="ico ico-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5 9-10"/></svg>Une équipe et des horaires fixes</li><li><svg class="ico ico-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5 9-10"/></svg>Planning adapté à votre activité</li><li><svg class="ico ico-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5 9-10"/></svg>Un seul interlocuteur pour tout ajustement</li></ul><p class="price">Prix : sur devis · [ou « à partir de CHF … » si Etienne le souhaite]</p><a class="btn btn-light" href="#contact">Demander un devis</a></div><div class="f-card"><h3>Sur mesure</h3><p><strong>Idéal pour :</strong> immeubles, régies, commerces et besoins particuliers.</p><ul><li><svg class="ico ico-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5 9-10"/></svg>Visite et plan d'intervention défini ensemble</li><li><svg class="ico ico-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5 9-10"/></svg>Fréquences et prestations combinées</li><li><svg class="ico ico-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5 9-10"/></svg>Suivi régulier de la qualité</li></ul><p class="price">Prix : sur devis · [ou « à partir de CHF … » si Etienne le souhaite]</p><a class="btn btn-primary" href="#contact">Demander un devis</a></div></div></div></div>
+<div class="sec"><div class="wrap"><div class="f-grid"><div class="f-card"><h3>Ponctuel</h3><p><strong>Idéal pour :</strong> fin de bail, fin de chantier, grand nettoyage.</p><ul><li><svg class="ico ico-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5 9-10"/></svg>Une intervention complète, à la date choisie</li><li><svg class="ico ico-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5 9-10"/></svg>Produits et matériel fournis [à confirmer]</li><li><svg class="ico ico-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5 9-10"/></svg>Contrôle avant la remise des lieux</li></ul><p class="price">Prix : sur devis · [ou « à partir de CHF … » si Etienne le souhaite]</p><a class="btn btn-primary" href="#devis">Demander un devis</a></div><div class="f-card featured"><span class="tag">Le plus demandé [à confirmer]</span><h3>Entretien régulier</h3><p><strong>Idéal pour :</strong> bureaux et immeubles, chaque semaine, toutes les deux semaines ou chaque mois.</p><ul><li><svg class="ico ico-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5 9-10"/></svg>Une équipe et des horaires fixes</li><li><svg class="ico ico-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5 9-10"/></svg>Planning adapté à votre activité</li><li><svg class="ico ico-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5 9-10"/></svg>Un seul interlocuteur pour tout ajustement</li></ul><p class="price">Prix : sur devis · [ou « à partir de CHF … » si Etienne le souhaite]</p><a class="btn btn-light" href="#devis">Demander un devis</a></div><div class="f-card"><h3>Sur mesure</h3><p><strong>Idéal pour :</strong> immeubles, régies, commerces et besoins particuliers.</p><ul><li><svg class="ico ico-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5 9-10"/></svg>Visite et plan d'intervention défini ensemble</li><li><svg class="ico ico-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5 9-10"/></svg>Fréquences et prestations combinées</li><li><svg class="ico ico-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5 9-10"/></svg>Suivi régulier de la qualité</li></ul><p class="price">Prix : sur devis · [ou « à partir de CHF … » si Etienne le souhaite]</p><a class="btn btn-primary" href="#devis">Demander un devis</a></div></div></div></div>
 <div class="sec alt"><div class="wrap stack-lg"><div class="stack"><span class="eyebrow">Transparence</span><h2>Ce qui fait varier le prix.</h2></div><div class="factor-grid"><div class="card factor"><svg class="ico ico-lg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 21V11l8-6 8 6v10"/><path d="M9 21v-6h6v6"/></svg><strong>La surface</strong><span>Nombre de pièces ou mètres carrés.</span></div><div class="card factor"><svg class="ico ico-lg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><strong>La fréquence</strong><span>Intervention unique ou entretien régulier.</span></div><div class="card factor"><svg class="ico ico-lg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3h9l4 4v14H6z"/><path d="M14 3v5h5M9 13h7M9 17h5"/></svg><strong>L'état des lieux</strong><span>Niveau de salissure, accès, étage.</span></div><div class="card factor"><svg class="ico ico-lg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="4" width="16" height="16"/><path d="M12 4v16M4 12h16"/></svg><strong>Les options</strong><span>Vitres, stores, balcon, cave.</span></div></div></div></div>
 </section>
 
@@ -598,8 +611,8 @@
 <div class="stack">
 <div class="card contact-card">
 <div class="who"><div class="who-photo">E</div><div><strong class="who-name">Etienne [Nom]</strong><span class="muted">Fondateur d'ERGIA · votre interlocuteur direct</span></div></div>
-<div class="c-line"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg><div><span>Téléphone direct</span><strong id="cTel">[078 … — à compléter]</strong></div></div>
-<div class="c-line"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg><div><span>E-mail</span><strong id="cMail">[contact@… — à compléter]</strong></div></div>
+<div class="c-line"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg><div><span>Téléphone direct</span><strong><a class="js-tel" href="#contact">[078 … — à compléter]</a></strong></div></div>
+<div class="c-line"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg><div><span>E-mail</span><strong><a class="js-mail" href="#contact">[contact@… — à compléter]</a></strong></div></div>
 <div class="c-line"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg><div><span>Adresse</span><strong>[Rue, NPA localité — à compléter]</strong></div></div>
 <div class="c-line"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><div><span>Horaires</span><strong>[Lun–ven, horaires à compléter]</strong></div></div>
 </div>
@@ -678,7 +691,7 @@
 <div class="wrap">
 <div class="cta-box">
 <div class="stack-sm"><h2>Un devis clair, gratuit et sans engagement.</h2><p>Décrivez votre besoin en une minute, nous vous rappelons rapidement.</p></div>
-<a class="btn btn-light" href="#contact">Demander un devis</a>
+<a class="btn btn-light" href="#devis">Demander un devis</a>
 </div>
 </div>
 </div>
@@ -688,14 +701,14 @@
 <div class="stack-sm"><a class="brand brand-light" href="#accueil"><svg class="logo-mark" viewBox="0 0 64 40" aria-hidden="true"><path d="M22 3Q22 12 31 12Q22 12 22 21Q22 12 13 12Q22 12 22 3Z" fill="#C29A4E"/><path d="M34 6Q34 9 37 9Q34 9 34 12Q34 9 31 9Q34 9 34 6Z" fill="var(--brand)"/><path d="M30 15.0Q30 17.5 32.5 17.5Q30 17.5 30 20.0Q30 17.5 27.5 17.5Q30 17.5 30 15.0Z" fill="var(--brand)"/><path d="M5 26Q30 42 57 22" stroke="#3F7FC1" stroke-width="3.2" fill="none" stroke-linecap="round"/><path d="M34 29Q45 13 61 15Q55 31 34 29Z" fill="#4E9A3A"/></svg><span class="wordmark">ERGIA</span></a><p>Nettoyage de fin de chantier, fin de bail et bureaux en Suisse romande.</p></div>
 <div class="foot-col"><strong>Prestations</strong><a href="#fin-de-chantier">Fin de chantier</a><a href="#fin-de-bail">Fin de bail</a><a href="#bureaux">Bureaux &amp; immeubles</a></div>
 <div class="foot-col"><strong>Entreprise</strong><a href="#apropos">À propos</a><a href="#formules">Formules</a><a href="#contact">Contact</a><a href="#confidentialite">Mentions légales</a></div>
-<div class="foot-col"><strong>Contact</strong><span>[Adresse — à compléter]</span><span>[078 … — à compléter]</span><span>[contact@… — à compléter]</span></div>
+<div class="foot-col"><strong>Contact</strong><span>[Adresse — à compléter]</span><a class="js-tel" href="#contact">[078 … — à compléter]</a><a class="js-mail" href="#contact">[contact@… — à compléter]</a></div>
 </div>
 <div class="wrap foot-bottom"><span>© <span id="year">2026</span> ERGIA</span><a href="#confidentialite">Mentions légales · Confidentialité (nLPD)</a></div>
 </footer>
 
 <div class="mobile-bar" id="mobileBar">
 <a class="btn btn-outline" id="mobileTel" href="#contact" hidden>Appeler</a>
-<a class="btn btn-primary" href="#contact">Demander un devis</a>
+<a class="btn btn-primary" href="#devis">Demander un devis</a>
 </div>
 
 <script>
@@ -705,7 +718,8 @@
 const CONFIG = {
   clientId: "ergia-site",                 // étiquette de chaque lead (preuve d'origine — ne pas supprimer)
   endpoint: "https://script.google.com/macros/s/AKfycbxP7l9-11du58j2TsOAwPCJ99KMNM6NDnI3S_6RwYIizOhHg8Ll2x_xF5KMZO6Q55W1yg/exec",
-  telephone: "",                          // ex. "078 123 45 67" — active le bouton « Appeler » sur mobile
+  telephone: "",                          // ex. "078 123 45 67" — rend le numéro cliquable partout + bouton « Appeler » sur mobile
+  email: "",                              // ex. "contact@ergia.ch" — rend l'adresse cliquable partout
   delaiReponse: "rapidement",             // ex. "sous 24h" UNIQUEMENT si Etienne le garantit
   cantons: { VD: "Vaud", GE: "Genève", FR: "Fribourg", VS: "Valais", JU: "Jura" },
   option: { name: "vitres", label: "Ajouter le nettoyage des vitres", detail: "Fenêtres, cadres et stores, dans la même intervention." },
@@ -725,11 +739,17 @@ function track(event, data) { (window.dataLayer = window.dataLayer || []).push({
 
 $("#year").textContent = new Date().getFullYear();
 $("#demoBanner").classList.toggle("show", !CONFIG.endpoint);
+function fillLinks(sel, text, href) {
+  $$(sel).forEach(a => { a.href = href; a.lastChild.textContent = text; });
+}
 if (CONFIG.telephone) {
+  const telHref = "tel:" + CONFIG.telephone.replace(/\s/g, "").replace(/^0/, "+41");
+  fillLinks(".js-tel", CONFIG.telephone, telHref);
   const t = $("#mobileTel");
-  t.href = "tel:" + CONFIG.telephone.replace(/\s/g, "").replace(/^0/, "+41");
+  t.href = telHref;
   t.hidden = false;
 }
+if (CONFIG.email) fillLinks(".js-mail", CONFIG.email, "mailto:" + CONFIG.email);
 
 /* ---------- Menu mobile et menu déroulant ---------- */
 const menuBtn = $("#menuBtn"), mobileMenu = $("#mobileMenu");
@@ -745,6 +765,17 @@ menuBtn.addEventListener("click", () => setMenu(!mobileMenu.classList.contains("
 const dd = $(".dd"), ddBtn = $(".dd-btn");
 ddBtn.addEventListener("click", e => { e.stopPropagation(); const o = !dd.classList.contains("open"); dd.classList.toggle("open", o); ddBtn.setAttribute("aria-expanded", o); });
 document.addEventListener("click", () => { dd.classList.remove("open"); ddBtn.setAttribute("aria-expanded", "false"); });
+document.addEventListener("keydown", e => {
+  if (e.key !== "Escape") return;
+  if (mobileMenu.classList.contains("open")) { setMenu(false); menuBtn.focus(); }
+  dd.classList.remove("open"); ddBtn.setAttribute("aria-expanded", "false");
+});
+// Un lien vers la page déjà affichée ne déclenche pas « hashchange » : on relance la navigation
+// pour fermer le menu et faire défiler jusqu'à la bonne section.
+document.addEventListener("click", e => {
+  const a = e.target.closest('a[href^="#"]');
+  if (a && a.getAttribute("href") === (location.hash || "#accueil")) { e.preventDefault(); route(); }
+});
 
 /* ---------- Navigation entre les pages (un seul fichier) ---------- */
 const PAGES = $$(".page");
@@ -832,7 +863,10 @@ $$("[data-next]").forEach(b => b.addEventListener("click", () => {
   goTo(current + 1);
   $("#devis").scrollIntoView({ behavior: "smooth", block: "start" });
 }));
-$$("[data-prev]").forEach(b => b.addEventListener("click", () => goTo(current - 1)));
+$$("[data-prev]").forEach(b => b.addEventListener("click", () => {
+  goTo(current - 1);
+  $("#devis").scrollIntoView({ behavior: "smooth", block: "start" });
+}));
 
 /* ---------- Score du lead (envoyé, jamais affiché) ---------- */
 function scoreLead(d) {
