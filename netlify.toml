@@ -1,0 +1,5 @@
+# Réglages Netlify pour le site MatchPro.
+# Seul le dossier site/ est publié. Pas d'étape de construction.
+[build]
+  publish = "site"
+  command = ""

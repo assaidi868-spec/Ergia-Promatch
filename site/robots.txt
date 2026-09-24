@@ -1,0 +1,5 @@
+# Domaine provisoire : si le domaine change, remplacer https://matchpro.ch ici, dans sitemap.xml et dans index.html
+User-agent: *
+Allow: /
+
+Sitemap: https://matchpro.ch/sitemap.xml
