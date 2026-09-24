@@ -324,6 +324,7 @@
   .rating .stars { color: var(--accent); letter-spacing: 2px; }
   .rating strong { color: var(--ink); }
   .foot-contact { margin-top: 12px; }
+  .foot-links { display: flex; flex-wrap: wrap; gap: 6px 16px; }
 
   /* Étapes */
   .steps-grid { margin-top: 48px; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; }
@@ -768,6 +769,7 @@
     <div>
       <div class="logo" aria-hidden="true"><svg viewBox="0 0 48 48"><use href="#mp-icon"></use></svg><span class="wordmark">Match<b>Pro</b></span></div>
       <p data-cfg="tagline">Les meilleurs pros au bon moment</p>
+      <p class="foot-links"><a href="nettoyage-fin-de-bail/">Nettoyage de fin de bail</a><a href="nettoyage-fin-de-chantier/">Nettoyage de fin de chantier</a><a href="nettoyage-bureaux/">Nettoyage de bureaux</a></p>
       <p id="footOperator">[Raison sociale ou nom complet — à compléter]<br>[Adresse — à compléter]<br>[email de contact — à compléter]</p>
       <p class="foot-contact" id="footContact" hidden=""></p>
     </div>
@@ -1198,6 +1200,7 @@ io.observe(card);
 
 goTo(1);
 </script>
+
 
 
 
