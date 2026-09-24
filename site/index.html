@@ -3,7 +3,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Devis nettoyage professionnel — Suisse romande | MatchPro</title>
-<meta name="description" content="Nettoyage de fin de chantier, fin de bail et bureaux en Suisse romande, vitres en option. Devis gratuit et sans engagement, un seul professionnel vous rappelle, pas quatre. Prix indicatifs et devis gratuit.">
+<meta name="description" content="Nettoyage de fin de chantier, fin de bail et bureaux en Suisse romande, vitres en option. Devis gratuit et sans engagement, un seul professionnel vous rappelle, pas quatre.">
 <meta name="theme-color" content="#0B1F3A">
 <!-- Référencement et aperçu de partage. Domaine provisoire https://matchpro.ch : s'il change, le remplacer partout dans ce fichier, sitemap.xml et robots.txt. -->
 <link rel="canonical" href="https://matchpro.ch/">
@@ -11,7 +11,7 @@
 <meta property="og:site_name" content="MatchPro">
 <meta property="og:locale" content="fr_CH">
 <meta property="og:title" content="Devis nettoyage professionnel — Suisse romande | MatchPro">
-<meta property="og:description" content="Nettoyage de fin de chantier, fin de bail et bureaux en Suisse romande, vitres en option. Devis gratuit et sans engagement, un seul professionnel vous rappelle, pas quatre. Prix indicatifs et devis gratuit.">
+<meta property="og:description" content="Nettoyage de fin de chantier, fin de bail et bureaux en Suisse romande, vitres en option. Devis gratuit et sans engagement, un seul professionnel vous rappelle, pas quatre.">
 <meta property="og:url" content="https://matchpro.ch/">
 <meta property="og:image" content="https://matchpro.ch/matchpro-partage.png">
 <meta property="og:image:width" content="1200">
@@ -461,7 +461,7 @@
   </defs>
 </svg>
 
-<div class="demo-banner show" id="demoBanner">Mode démo — prix indicatifs à valider avec le partenaire (CONFIG.prix.valide).</div>
+<div class="demo-banner" id="demoBanner">Mode démo — prix indicatifs à valider avec le partenaire (CONFIG.prix.valide).</div>
 
 <header class="site">
   <div class="wrap header-row">
@@ -471,7 +471,7 @@
     </a>
     <nav class="nav" aria-label="Navigation principale">
       <a href="#services">Services</a>
-      <a href="#prix">Prix</a>
+      <a href="#prix" hidden="">Prix</a>
       <a href="#comment">Comment ça marche</a>
       <a href="#pros">Professionnels</a>
       <a href="#faq">FAQ</a>
@@ -698,15 +698,15 @@
 </section>
 
 <!-- PRIX INDICATIFS (masqué si CONFIG.prix = null) -->
-<section class="block" id="prix">
+<section class="block" id="prix" hidden="">
   <div class="wrap">
     <div class="eyebrow">Prix indicatifs</div>
     <h2>Combien coûte <em>un nettoyage ?</em></h2>
     <p class="sub">Des fourchettes pour vous situer avant de demander votre devis. Le prix exact dépend de la surface, de l'état des lieux et de l'accès.</p>
-    <div class="price-grid" id="priceGrid"><div class="price-card" data-price="chantier"><div class="price-head"><svg class="ico-box" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 21V11l8-6 8 6v10"></path><line x1="18" y1="5" x2="21.5" y2="8.5"></line></svg><h3>Fin de chantier</h3></div><dl><div class="price-row"><dt>Tarif horaire</dt><dd>CHF 50 – 90 / h</dd></div><div class="price-row"><dt>Au m²</dt><dd>CHF 12 – 20 / m²</dd></div><div class="price-row"><dt>Appartement 1–2 pièces</dt><dd>CHF 400 – 720</dd></div><div class="price-row"><dt>Appartement 3–4 pièces</dt><dd>CHF 700 – 1'800</dd></div><div class="price-row"><dt>Maison 120–180 m²</dt><dd>CHF 1'450 – 3'500</dd></div></dl><a class="go" href="#devis" data-pick="chantier">Obtenir mon prix exact →</a></div><div class="price-card" data-price="fin-de-bail"><div class="price-head"><svg class="ico-box" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="7" y="3.5" width="10" height="17" rx="0.5"></rect><circle cx="14" cy="12" r="0.9" fill="currentColor" stroke="none"></circle></svg><h3>Fin de bail</h3></div><dl><div class="price-row"><dt>Studio</dt><dd>CHF 250 – 300</dd></div><div class="price-row"><dt>2 pièces</dt><dd>CHF 450 – 550</dd></div><div class="price-row"><dt>3 pièces</dt><dd>CHF 500 – 750</dd></div><div class="price-row"><dt>4 pièces</dt><dd>CHF 650 – 880</dd></div><div class="price-row"><dt>5 pièces</dt><dd>CHF 750 – 1'200</dd></div></dl><a class="go" href="#devis" data-pick="fin-de-bail">Obtenir mon prix exact →</a></div><div class="price-card" data-price="bureaux"><div class="price-head"><svg class="ico-box" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="3" width="14" height="18"></rect><path d="M9 7h.01M12 7h.01M15 7h.01M9 11h.01M12 11h.01M15 11h.01M9 15h.01M12 15h.01M15 15h.01"></path></svg><h3>Bureaux &amp; immeubles</h3></div><dl><div class="price-row"><dt>Bureaux et commerces</dt><dd>CHF 35 – 75 / h</dd></div><div class="price-row"><dt>Immeubles, conciergerie</dt><dd>CHF 35 – 65 / h</dd></div></dl><a class="go" href="#devis" data-pick="bureaux">Obtenir mon prix exact →</a></div></div>
+    <div class="price-grid" id="priceGrid"></div>
     <div class="price-foot">
-      <p class="price-note" id="priceNote">Fourchettes indicatives observées en Suisse romande. Le montant exact est fixé dans le devis, après échange avec le professionnel.</p>
-      <span class="price-extra" id="priceExtra"><svg class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="4" width="16" height="16"></rect><path d="M12 4v16M4 12h16"></path></svg>Vitres en option : CHF 40 – 70 / h</span>
+      <p class="price-note" id="priceNote"></p>
+      <span class="price-extra" id="priceExtra" hidden=""></span>
     </div>
   </div>
 </section>
@@ -748,7 +748,7 @@
   <div class="wrap">
     <div class="eyebrow">Questions fréquentes</div>
     <h2>Avant de demander <em>votre devis</em></h2>
-    <div class="faq" id="faqList"><details><summary>Le devis est-il vraiment gratuit ?</summary><p>Oui. La demande et le devis sont gratuits et sans engagement : vous êtes libre de ne pas donner suite.</p></details><details><summary>Qui va me contacter ?</summary><p>Une seule entreprise de nettoyage partenaire, active dans votre région. Vos coordonnées ne sont transmises à personne d'autre.</p></details><details><summary>Pourquoi un seul professionnel et pas plusieurs devis ?</summary><p>Parce que comparer quatre devis veut souvent dire recevoir quatre appels. Votre demande est transmise à une seule entreprise de votre région : un interlocuteur, un devis, et vous restez libre de ne pas donner suite.</p></details><details><summary>Combien coûte un nettoyage ?</summary><p>Consultez nos prix indicatifs ci-dessus. Le montant exact dépend de la surface, de l'état des lieux et des options : c'est pourquoi le formulaire vous demande quelques détails, pour un devis juste dès le premier appel.</p></details><details><summary>Combien de temps à l'avance faut-il réserver ?</summary><p>Idéalement une à deux semaines avant la date souhaitée, et davantage en fin de mois, période chargée pour les fins de bail. En cas d'urgence, indiquez-le dans les précisions du formulaire.</p></details><details><summary>Quelle différence entre fin de chantier et fin de bail ?</summary><p>Le nettoyage de fin de chantier retire les poussières fines et les résidus de plâtre, de peinture, de colle et de protections après des travaux. Le nettoyage de fin de bail prépare un logement déjà habité pour l'état des lieux de sortie avec la régie.</p></details><details><summary>Faut-il une visite sur place ?</summary><p>Pas toujours. Pour les petites surfaces, quelques photos suffisent souvent. Pour un chantier ou de grands locaux, le professionnel peut proposer une courte visite.</p></details><details><summary>Pouvez-vous aussi nettoyer les vitres ?</summary><p>Oui, en option. Cochez « Ajouter le nettoyage des vitres » dans le formulaire : fenêtres, cadres et stores sont alors inclus dans le devis de la même intervention.</p></details><details><summary>Et mes données personnelles ?</summary><p>Elles servent uniquement à établir votre devis, ne sont ni vendues ni partagées avec d'autres entreprises, et vous pouvez demander leur suppression à tout moment.</p></details></div>
+    <div class="faq" id="faqList"><details><summary>Le devis est-il vraiment gratuit ?</summary><p>Oui. La demande et le devis sont gratuits et sans engagement : vous êtes libre de ne pas donner suite.</p></details><details><summary>Qui va me contacter ?</summary><p>Une seule entreprise de nettoyage partenaire, active dans votre région. Vos coordonnées ne sont transmises à personne d'autre.</p></details><details><summary>Pourquoi un seul professionnel et pas plusieurs devis ?</summary><p>Parce que comparer quatre devis veut souvent dire recevoir quatre appels. Votre demande est transmise à une seule entreprise de votre région : un interlocuteur, un devis, et vous restez libre de ne pas donner suite.</p></details><details><summary>Combien coûte un nettoyage ?</summary><p>Le montant dépend de la surface, de l'état des lieux et des options : c'est pourquoi le formulaire vous demande quelques détails, pour un devis juste dès le premier appel.</p></details><details><summary>Combien de temps à l'avance faut-il réserver ?</summary><p>Idéalement une à deux semaines avant la date souhaitée, et davantage en fin de mois, période chargée pour les fins de bail. En cas d'urgence, indiquez-le dans les précisions du formulaire.</p></details><details><summary>Quelle différence entre fin de chantier et fin de bail ?</summary><p>Le nettoyage de fin de chantier retire les poussières fines et les résidus de plâtre, de peinture, de colle et de protections après des travaux. Le nettoyage de fin de bail prépare un logement déjà habité pour l'état des lieux de sortie avec la régie.</p></details><details><summary>Faut-il une visite sur place ?</summary><p>Pas toujours. Pour les petites surfaces, quelques photos suffisent souvent. Pour un chantier ou de grands locaux, le professionnel peut proposer une courte visite.</p></details><details><summary>Pouvez-vous aussi nettoyer les vitres ?</summary><p>Oui, en option. Cochez « Ajouter le nettoyage des vitres » dans le formulaire : fenêtres, cadres et stores sont alors inclus dans le devis de la même intervention.</p></details><details><summary>Et mes données personnelles ?</summary><p>Elles servent uniquement à établir votre devis, ne sont ni vendues ni partagées avec d'autres entreprises, et vous pouvez demander leur suppression à tout moment.</p></details></div>
   </div>
 </section>
 
@@ -770,12 +770,12 @@
       <div class="logo" aria-hidden="true"><svg viewBox="0 0 48 48"><use href="#mp-icon"></use></svg><span class="wordmark">Match<b>Pro</b></span></div>
       <p data-cfg="tagline">Les meilleurs pros au bon moment</p>
       <p class="foot-links"><a href="nettoyage-fin-de-bail/">Nettoyage de fin de bail</a><a href="nettoyage-fin-de-chantier/">Nettoyage de fin de chantier</a><a href="nettoyage-bureaux/">Nettoyage de bureaux</a></p>
-      <p id="footOperator">[Raison sociale ou nom complet — à compléter]<br>[Adresse — à compléter]<br>[email de contact — à compléter]</p>
+      <p id="footOperator">[Raison sociale ou nom complet — à compléter]<br>[Adresse — à compléter]<br>contact@matchpro.ch</p>
       <p class="foot-contact" id="footContact" hidden=""></p>
     </div>
     <div id="confidentialite">
       <h3>Protection des données (nLPD)</h3>
-      <p id="privacyText">Responsable du traitement : [Raison sociale ou nom complet — à compléter]. Les données saisies (nom, téléphone, e-mail facultatif, lieu et description du besoin) sont utilisées uniquement pour vous mettre en relation avec une seule entreprise de nettoyage partenaire en vue d'un devis. Elles ne sont ni vendues ni transmises à d'autres tiers, et sont conservées 12 mois au maximum. Vous pouvez demander l'accès, la rectification ou la suppression de vos données à [email de contact — à compléter].</p>
+      <p id="privacyText">Responsable du traitement : [Raison sociale ou nom complet — à compléter]. Les données saisies (nom, téléphone, e-mail facultatif, lieu et description du besoin) sont utilisées uniquement pour vous mettre en relation avec une seule entreprise de nettoyage partenaire en vue d'un devis. Elles ne sont ni vendues ni transmises à d'autres tiers, et sont conservées 12 mois au maximum. Vous pouvez demander l'accès, la rectification ou la suppression de vos données à contact@matchpro.ch.</p>
       <p style="font-size:.74rem;">© <span id="year">2026</span> <span data-cfg="marque">MatchPro</span>. Service de mise en relation avec des entreprises de nettoyage partenaires.</p>
     </div>
   </div>
@@ -805,7 +805,7 @@ const CONFIG = {
   operateur: {
     nom: "[Raison sociale ou nom complet — à compléter]",
     adresse: "[Adresse — à compléter]",
-    email: "[email de contact — à compléter]",
+    email: "contact@matchpro.ch",
     conservation: "12 mois"
   },
 
@@ -850,16 +850,8 @@ const CONFIG = {
   // Prix indicatifs par service (null = section masquée).
   // valide: false tant que les fourchettes n'ont pas été confirmées par le partenaire (rappel dans le bandeau démo).
   // Valeurs de départ = fourchettes publiques observées sur le marché romand en 2026 — À VALIDER AVANT MISE EN LIGNE.
-  prix: {
-    valide: false,
-    note: "Fourchettes indicatives observées en Suisse romande. Le montant exact est fixé dans le devis, après échange avec le professionnel.",
-    services: {
-      "chantier":    [["Tarif horaire", "CHF 50 – 90 / h"], ["Au m²", "CHF 12 – 20 / m²"], ["Appartement 1–2 pièces", "CHF 400 – 720"], ["Appartement 3–4 pièces", "CHF 700 – 1'800"], ["Maison 120–180 m²", "CHF 1'450 – 3'500"]],
-      "fin-de-bail": [["Studio", "CHF 250 – 300"], ["2 pièces", "CHF 450 – 550"], ["3 pièces", "CHF 500 – 750"], ["4 pièces", "CHF 650 – 880"], ["5 pièces", "CHF 750 – 1'200"]],
-      "bureaux":     [["Bureaux et commerces", "CHF 35 – 75 / h"], ["Immeubles, conciergerie", "CHF 35 – 65 / h"]]
-    },
-    option: "Vitres en option : CHF 40 – 70 / h"
-  },
+  // Prix indicatifs retirés le 25.09.2026 (fourchettes non validées). Pour les remettre : objet { valide, note, services, option }.
+  prix: null,
 
   // Bloc « professionnels du bâtiment » (null = masqué)
   pro: {
@@ -881,7 +873,7 @@ const CONFIG = {
     ["Le devis est-il vraiment gratuit ?", "Oui. La demande et le devis sont gratuits et sans engagement : vous êtes libre de ne pas donner suite."],
     ["Qui va me contacter ?", "Une seule entreprise de nettoyage partenaire, active dans votre région. Vos coordonnées ne sont transmises à personne d'autre."],
     ["Pourquoi un seul professionnel et pas plusieurs devis ?", "Parce que comparer quatre devis veut souvent dire recevoir quatre appels. Votre demande est transmise à une seule entreprise de votre région : un interlocuteur, un devis, et vous restez libre de ne pas donner suite."],
-    ["Combien coûte un nettoyage ?", "Consultez nos prix indicatifs ci-dessus. Le montant exact dépend de la surface, de l'état des lieux et des options : c'est pourquoi le formulaire vous demande quelques détails, pour un devis juste dès le premier appel."],
+    ["Combien coûte un nettoyage ?", "Le montant dépend de la surface, de l'état des lieux et des options : c'est pourquoi le formulaire vous demande quelques détails, pour un devis juste dès le premier appel."],
     ["Combien de temps à l'avance faut-il réserver ?", "Idéalement une à deux semaines avant la date souhaitée, et davantage en fin de mois, période chargée pour les fins de bail. En cas d'urgence, indiquez-le dans les précisions du formulaire."],
     ["Quelle différence entre fin de chantier et fin de bail ?", "Le nettoyage de fin de chantier retire les poussières fines et les résidus de plâtre, de peinture, de colle et de protections après des travaux. Le nettoyage de fin de bail prépare un logement déjà habité pour l'état des lieux de sortie avec la régie."],
     ["Faut-il une visite sur place ?", "Pas toujours. Pour les petites surfaces, quelques photos suffisent souvent. Pour un chantier ou de grands locaux, le professionnel peut proposer une courte visite."],
@@ -1200,6 +1192,7 @@ io.observe(card);
 
 goTo(1);
 </script>
+
 
 
 
