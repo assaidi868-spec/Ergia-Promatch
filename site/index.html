@@ -505,7 +505,7 @@
         <div class="sep" aria-hidden="true"></div>
         <div class="field field--npa">
           <label for="localite">NPA et localité</label>
-          <input type="text" id="localite" name="localite" form="leadForm" placeholder="ex. 1110 Morges" autocomplete="postal-code" required="">
+          <input type="text" id="localite" name="localite" form="leadForm" placeholder="ex. 1110 Morges" autocomplete="postal-code" required="" list="localite-liste"><datalist id="localite-liste"></datalist>
         </div>
         <button type="button" class="btn" data-next="">Trouver mon pro<svg width="18" height="18" aria-hidden="true"><use href="#pm-arrow"></use></svg></button>
       </div>
@@ -1094,6 +1094,45 @@ $$("[data-edit]").forEach(b => b.addEventListener("click", () => {
 }));
 $("#service").addEventListener("change", e => applyService(e.target.value));
 $("#localite").addEventListener("input", updateViz);
+
+/* ---------- NPA → localité (et canton) ----------
+   « 1110 » → « 1110 Morges » (le nom ajouté reste sélectionné : on peut continuer à taper par-dessus).
+   Plusieurs localités pour un NPA (ex. 1227) → propositions sous le champ. Le canton (étape 2) est choisi
+   automatiquement, sauf si le visiteur l'a choisi lui-même. Sans JavaScript ou NPA inconnu : champ normal.
+   Données : assets/npa-romandie.json, chargé seulement quand le visiteur entre dans le champ. */
+function brancherNPA(input, cantonSelect, apres) {
+  if (!input) return;
+  let chargement = null, cantonAuto = false;
+  const idListe = input.id + "-liste";
+  let liste = document.getElementById(idListe);
+  if (!liste) { liste = document.createElement("datalist"); liste.id = idListe; input.after(liste); }
+  input.setAttribute("list", idListe);
+  const charger = () => chargement || (chargement = fetch(new URL("assets/npa-romandie.json", location.href))
+    .then(r => r.ok ? r.json() : {}).catch(() => ({})));
+  input.addEventListener("focus", charger, { once: true });
+  input.addEventListener("input", async e => {
+    const m = /^\s*(\d{4})\s*$/.exec(input.value);
+    if (!m) return;
+    const npa = m[1], donnees = await charger();
+    if (input.value.trim() !== npa) return;              // le visiteur a continué à taper entre-temps
+    const lieux = (donnees[npa] || "").split(";").filter(Boolean).map(x => x.split("|"));
+    liste.innerHTML = lieux.map(([nom]) => `<option value="${npa} ${esc(nom)}">`).join("");
+    if (!lieux.length) return;
+    const cantons = [...new Set(lieux.map(l => l[1]))];
+    if (cantonSelect && cantons.length === 1 && (!cantonSelect.value || cantonAuto)
+        && [...cantonSelect.options].some(o => o.value === cantons[0])) {
+      cantonSelect.value = cantons[0]; cantonAuto = true;
+    }
+    if (lieux.length === 1 && !/^delete/.test(e.inputType || "")) {
+      const debut = npa + " ";
+      input.value = debut + lieux[0][0];
+      try { input.setSelectionRange(debut.length, input.value.length); } catch (x) {}
+      if (apres) apres();
+    }
+  });
+  if (cantonSelect) cantonSelect.addEventListener("change", () => { cantonAuto = false; });
+}
+brancherNPA($("#localite"), $("#canton"), updateViz);
 $$("[data-pick]").forEach(a => a.addEventListener("click", e => {
   e.preventDefault();
   applyService(a.dataset.pick);
@@ -1194,6 +1233,7 @@ io.observe(card);
 
 goTo(1);
 </script>
+
 
 
 
