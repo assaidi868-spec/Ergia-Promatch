@@ -329,7 +329,7 @@
   /* Étapes */
   .steps-grid { margin-top: 48px; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; }
   .step { padding: 28px; border-radius: var(--radius); background: var(--surface); border: 1px solid var(--line); }
-  .step .num { display: inline-flex; align-items: center; justify-content: center; width: 44px; height: 44px; border-radius: 50%; border: 1px solid var(--accent-line); color: var(--accent); font-family: var(--font-display); font-weight: 700; font-size: .95rem; }
+  .step .num { display: inline-flex; align-items: center; justify-content: center; width: 44px; height: 44px; border-radius: 50%; border: 1px solid var(--accent-line); color: var(--accent-ink); font-family: var(--font-display); font-weight: 700; font-size: .95rem; }
   .step h3 { font-size: 1.12rem; margin-top: 18px; }
   .step p { font-size: .95rem; color: var(--text-3); margin: 8px 0 0; }
 
@@ -391,7 +391,7 @@
     .form-card { max-width: 680px; }
     .steps-grid { grid-template-columns: 1fr; }
     .foot-grid { grid-template-columns: 1fr; }
-    .compare-grid, .pro-grid { grid-template-columns: 1fr; }
+    .compare-grid, .pro-grid { grid-template-columns: minmax(0, 1fr); }
     .pro-grid { gap: 32px; }
   }
   @media (max-width: 640px) {
@@ -428,6 +428,8 @@
     .mobile-bar .btn { flex: 1; min-height: 50px; }
     .mobile-bar .btn.ghost { flex: 0 0 auto; }
   }
+  /* Très petits écrans : le bouton du bloc « professionnels » peut passer sur deux lignes au lieu de dépasser */
+  @media (max-width: 359px) { .pro-band .btn { white-space: normal; text-align: center; padding-block: 12px; } }
   @media (prefers-reduced-motion: reduce) {
     html { scroll-behavior: auto; }
     *, *::before, *::after { animation: none !important; transition: none !important; }
@@ -1192,6 +1194,7 @@ io.observe(card);
 
 goTo(1);
 </script>
+
 
 
 
