@@ -3,3 +3,17 @@
 [build]
   publish = "site"
   command = ""
+
+# En-têtes de sécurité, envoyés par Netlify avec chaque page.
+# ⚠️ La ligne Content-Security-Policy liste les seuls sites extérieurs autorisés (polices Google, script Google des leads).
+#    Si on ajoute un jour Google Analytics / Tag Manager / un autre outil, il faudra l'ajouter ici, sinon il sera bloqué.
+[[headers]]
+  for = "/*"
+  [headers.values]
+    Strict-Transport-Security = "max-age=31536000"
+    X-Content-Type-Options = "nosniff"
+    X-Frame-Options = "DENY"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    Permissions-Policy = "camera=(), microphone=(), geolocation=(), payment=(), usb=(), interest-cohort=()"
+    # Le script de la landing est écrit dans la page (index.html) : 'unsafe-inline' est donc nécessaire pour les scripts.
+    Content-Security-Policy = "default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self' https://script.google.com https://script.googleusercontent.com; frame-ancestors 'none'; base-uri 'self'; form-action 'self'; object-src 'none'"
