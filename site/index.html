@@ -160,6 +160,13 @@
   .search .chev { position: absolute; right: 16px; bottom: 16px; pointer-events: none; }
   .search .sep { width: 1px; background: var(--line); margin: 10px 0; }
   .search .btn { min-height: 64px; padding: 0 22px; border-radius: 14px; font-size: 1.02rem; }
+  /* Choix de la localité quand un NPA en a plusieurs (ex. 1227) — remplace le <datalist>, qui ne s'ouvre pas sur iPhone */
+  .npa-choix { position: absolute; top: calc(100% + 6px); left: 0; right: 0; min-width: 220px; z-index: 5; display: flex; flex-direction: column; gap: 4px; padding: 8px; background: var(--surface); border: 1px solid var(--line-strong); border-radius: 14px; box-shadow: var(--shadow); max-height: 184px; overflow-y: auto; overscroll-behavior: contain; }
+  @media (max-width: 980px) { .npa-choix { max-height: min(320px, 50vh); } }
+  .npa-choix[hidden] { display: none; }
+  .npa-choix p { padding: 2px 8px 4px; font-size: .8rem; color: var(--muted); }
+  .npa-choix button { flex: none; font: 500 1rem/1.3 var(--font-body); text-align: left; min-height: 44px; padding: 10px 12px; border: 0; border-radius: 10px; background: transparent; color: var(--ink); cursor: pointer; }
+  .npa-choix button:hover, .npa-choix button:focus-visible { background: var(--accent-soft); outline: none; }
   select option { background: var(--surface); color: var(--ink); }
   ::placeholder { color: var(--placeholder); }
 
@@ -505,7 +512,7 @@
         <div class="sep" aria-hidden="true"></div>
         <div class="field field--npa">
           <label for="localite">NPA et localité</label>
-          <input type="text" id="localite" name="localite" form="leadForm" placeholder="ex. 1110 Morges" autocomplete="postal-code" required="" list="localite-liste"><datalist id="localite-liste"></datalist>
+          <input type="text" id="localite" name="localite" form="leadForm" placeholder="ex. 1110 Morges" autocomplete="postal-code" required=""><div id="localite-choix" class="npa-choix" hidden=""></div>
         </div>
         <button type="button" class="btn" data-next="">Trouver mon pro<svg width="18" height="18" aria-hidden="true"><use href="#pm-arrow"></use></svg></button>
       </div>
@@ -1097,39 +1104,64 @@ $("#localite").addEventListener("input", updateViz);
 
 /* ---------- NPA → localité (et canton) ----------
    « 1110 » → « 1110 Morges » (le nom ajouté reste sélectionné : on peut continuer à taper par-dessus).
-   Plusieurs localités pour un NPA (ex. 1227) → propositions sous le champ. Le canton (étape 2) est choisi
+   Plusieurs localités pour un NPA (ex. 1227) → boutons de choix sous le champ. Le canton (étape 2) est choisi
    automatiquement, sauf si le visiteur l'a choisi lui-même. Sans JavaScript ou NPA inconnu : champ normal.
    Données : assets/npa-romandie.json, chargé seulement quand le visiteur entre dans le champ. */
 function brancherNPA(input, cantonSelect, apres) {
   if (!input) return;
   let chargement = null, cantonAuto = false;
-  const idListe = input.id + "-liste";
-  let liste = document.getElementById(idListe);
-  if (!liste) { liste = document.createElement("datalist"); liste.id = idListe; input.after(liste); }
-  input.setAttribute("list", idListe);
-  const charger = () => chargement || (chargement = fetch(new URL("assets/npa-romandie.json", location.href))
-    .then(r => r.ok ? r.json() : {}).catch(() => ({})));
-  input.addEventListener("focus", charger, { once: true });
-  input.addEventListener("input", async e => {
-    const m = /^\s*(\d{4})\s*$/.exec(input.value);
-    if (!m) return;
-    const npa = m[1], donnees = await charger();
-    if (input.value.trim() !== npa) return;              // le visiteur a continué à taper entre-temps
-    const lieux = (donnees[npa] || "").split(";").filter(Boolean).map(x => x.split("|"));
-    liste.innerHTML = lieux.map(([nom]) => `<option value="${npa} ${esc(nom)}">`).join("");
-    if (!lieux.length) return;
+  // Propositions dessinées par le site (le <datalist> natif ne s'ouvre pas correctement sur iPhone).
+  const idChoix = input.id + "-choix";
+  let choix = document.getElementById(idChoix);
+  if (!choix) {
+    choix = document.createElement("div");
+    choix.id = idChoix; choix.className = "npa-choix"; choix.hidden = true;
+    input.after(choix);
+  }
+  const fermer = () => { choix.hidden = true; choix.innerHTML = ""; };
+  const choisirCanton = lieux => {
     const cantons = [...new Set(lieux.map(l => l[1]))];
     if (cantonSelect && cantons.length === 1 && (!cantonSelect.value || cantonAuto)
         && [...cantonSelect.options].some(o => o.value === cantons[0])) {
       cantonSelect.value = cantons[0]; cantonAuto = true;
     }
-    if (lieux.length === 1 && !/^delete/.test(e.inputType || "")) {
+  };
+  const charger = () => chargement || (chargement = fetch(new URL("assets/npa-romandie.json", location.href)).then(r => r.ok ? r.json() : {}).catch(() => ({})));
+  input.addEventListener("focus", charger, { once: true });
+  input.addEventListener("input", async e => {
+    const m = /^\s*(\d{4})\s*$/.exec(input.value);
+    if (!m) { fermer(); return; }
+    const npa = m[1], donnees = await charger();
+    if (input.value.trim() !== npa) return;              // le visiteur a continué à taper entre-temps
+    const lieux = (donnees[npa] || "").split(";").filter(Boolean).map(x => x.split("|"));
+    fermer();
+    if (!lieux.length) return;
+    choisirCanton(lieux);
+    if (lieux.length === 1) {
+      if (/^delete/.test(e.inputType || "")) return;
       const debut = npa + " ";
       input.value = debut + lieux[0][0];
       try { input.setSelectionRange(debut.length, input.value.length); } catch (x) {}
       if (apres) apres();
+      return;
     }
+    choix.innerHTML = `<p>Choisissez votre localité :</p>` + lieux.map(([nom, ct]) =>
+      `<button type="button" data-canton="${esc(ct)}">${npa} ${esc(nom)}</button>`).join("");
+    choix.hidden = false;
   });
+  choix.addEventListener("click", e => {
+    const b = e.target.closest("button");
+    if (!b) return;
+    input.value = b.textContent;
+    if (cantonSelect && (!cantonSelect.value || cantonAuto) && [...cantonSelect.options].some(o => o.value === b.dataset.canton)) {
+      cantonSelect.value = b.dataset.canton; cantonAuto = true;
+    }
+    fermer();
+    input.setCustomValidity("");
+    if (apres) apres();
+  });
+  input.addEventListener("keydown", e => { if (e.key === "Escape" && !choix.hidden) { e.stopPropagation(); fermer(); } });
+  document.addEventListener("pointerdown", e => { if (!choix.hidden && e.target !== input && !choix.contains(e.target)) fermer(); });
   if (cantonSelect) cantonSelect.addEventListener("change", () => { cantonAuto = false; });
 }
 brancherNPA($("#localite"), $("#canton"), updateViz);
@@ -1233,6 +1265,8 @@ io.observe(card);
 
 goTo(1);
 </script>
+
+
 
 
 
