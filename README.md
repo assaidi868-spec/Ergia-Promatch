@@ -17,3 +17,4 @@ Landing page de mise en relation pour le nettoyage en Suisse romande.
   construit par le script (services, prix, FAQ, zone…), pour Google et pour l'affichage sans JavaScript.
 - Domaine provisoire `https://matchpro.ch` : s'il change, le remplacer dans toutes les pages de `site/`, `site/sitemap.xml` et `site/robots.txt`.
 - En-têtes de sécurité dans `netlify.toml` : la ligne `Content-Security-Policy` n'autorise que le site, Google Fonts et le script Google des leads. Tout nouvel outil extérieur (statistiques, publicité…) doit y être ajouté, sinon il sera bloqué.
+- Hébergement : Netlify (plan gratuit) a suspendu les mises à jour le 30.09.2026 (crédits épuisés) ; le site est prévu sur **Cloudflare Pages** (dépôt `main`, pas de commande de construction, dossier de sortie `site`). `site/_headers` reprend les en-têtes de sécurité de `netlify.toml` (à garder identiques).
