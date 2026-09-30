@@ -1,0 +1,12 @@
+# En-têtes de sécurité pour tout le site (Cloudflare Pages ; Netlify les lit aussi, comme netlify.toml).
+# ⚠️ Même contenu que [[headers]] de netlify.toml : si on change l'un, changer l'autre.
+# Content-Security-Policy : seuls le site, Google Fonts et le script Google des leads sont autorisés ;
+# 'unsafe-inline' pour les scripts est nécessaire car le script de la landing est écrit dans index.html.
+# Tout nouvel outil extérieur (Analytics, Tag Manager, chat…) doit être ajouté à cette ligne, sinon il est bloqué.
+/*
+  Strict-Transport-Security: max-age=31536000
+  X-Content-Type-Options: nosniff
+  X-Frame-Options: DENY
+  Referrer-Policy: strict-origin-when-cross-origin
+  Permissions-Policy: camera=(), microphone=(), geolocation=(), payment=(), usb=(), interest-cohort=()
+  Content-Security-Policy: default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self' https://script.google.com https://script.googleusercontent.com; frame-ancestors 'none'; base-uri 'self'; form-action 'self'; object-src 'none'
